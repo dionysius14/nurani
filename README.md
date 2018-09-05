@@ -1,2 +1,2 @@
-# wedding_indah
-web wedding diamond indah kusumawati
+# nurani
+web nurani
