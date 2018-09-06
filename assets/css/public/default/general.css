@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto';
+}
+body, p {
+    font-family: 'Lato';
+}
+
 body{
 	background: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;    
+    color: #4b5560;
 }
 body .container{
     width: 100%;
@@ -9,11 +19,22 @@ body .container{
     overflow: hidden;
 }
 .header{
-	max-width: 1280px;
-	margin: 0 auto;
+	max-width: 100%;
 	overflow: hidden;
     width: 100%;
     padding-bottom: 20px;
+}
+.header .upper{
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.header .upper #google_translate_element{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .header .logo,
 .header .header-menu{
@@ -21,41 +42,68 @@ body .container{
     margin-top: 20px;
 }
 .header .logo{
-	width: 25%;
+	width: 50%;
 }
 .header .header-menu{
-	width: 75%;
+    width: 100%;
+    float: none;
+    background-color: #3498db;
+    -webkit-box-shadow: 0px 1px 5px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px -2px rgba(0,0,0,0.75);
+}
+.header .header-menu.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 0px;
+    z-index: 999;
 }
 .header .header-menu .navbar-nav{
-	width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;    
+    display: block;
+    width: auto;
 }
 .header .header-menu .navbar-nav .handlee{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;    
+    color: white;
+    text-transform: none;
+    font-size: 14px;
+    border-top: 3px solid transparent;    
+    margin-top: -4px;   
 }
 .header .header-menu .navbar-nav li{
 	padding: 0px;
 	line-height: 70px;
-	width: calc(100%/6);    
-    text-align: center;
+	width: calc(100%/5);    
+    text-align: center; 
+    padding: 0px 5px;
+}
+.header .header-menu .navbar-nav li:hover a,
+.header .header-menu .navbar-nav li.active a{
+    border-top: 3px solid #3498db;
+}
+
+.header .header-menu .navbar-nav li:hover .handlee,
+.header .header-menu .navbar-nav li.active .handlee{
+    color: #3498db;
+    background: white;
 }
 .header .header-menu .navbar-nav li.list-menu.language{
     line-height: 20px !important;
-    max-height: 70px;
+    max-height: 55px;
     overflow: hidden;
     padding-top: 20px;
 }
 .header .header-menu .navbar-nav li a{
 	padding: 0px;
-	line-height: 70px;    
+	line-height: 55px;    
     text-transform: uppercase;
     font-size: 13px;
 }
 .footer-container{
-    background: #437422;
-}
-.homepage-body .footer-container{
-    border-top: 45px solid #2C4F15;
-    margin: -30px 0 0 0;
+    background: #233445;
 }
 .footer{
 	max-width: 1280px;
@@ -71,40 +119,27 @@ body .container{
 	margin:0px;
 }
 .footer p.copy{
-	background: url(../default/img/copybg.png) repeat-x;
     display: block;
     width: 100%;
-    float: left;
     padding: 10px 0 0 0;
     text-transform: uppercase;
+    border-top: 1px solid #202933;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .footer .row .head-office,
 .footer .row .copyright,
-.footer .row .branch,
-.footer .row .newsletter{
-	width: 29%;
+.footer .row .branch{
+	width: 40%;
     text-align: left;
     float: left;
 }
-.footer .row #nav-footer,
-.footer .row #attention{
-    width: 130px;
-    text-align: right;
-    float: right;
-    max-width: 500px;
+.footer .row div{
+    color: #A1A7AD;
 }
-.footer .row #attention{
-    width: 50%;
-}
-.footer .row #nav-footer li{
-    list-style: none;
-    padding: 0px;
-    text-align: right;
-}
-.footer .row #nav-footer li a{
-    font-family: 'Open Sans', sans-serif;    
-    text-transform: uppercase;
-    font-size: 13px;
+
+.footer .row .head-office{
+    background: url(../default/img/contact_bg.png) no-repeat;
 }
 .footer .row .branch .branch-item{
     width: 50%;
@@ -112,48 +147,136 @@ body .container{
     padding: 0px 10px 0px 10px;
 }
 .footer .row h3{
-    font-size: 14px;
-    font-weight: 800;
-    margin-top: 5px;
-}
-
-.footer .row .newsletter{
-    padding: 0px 15px 0px 15px;
-}
-.footer .row .newsletter form{
-    position: relative;
-}
-.footer .row .newsletter form .newsletter-container{
-    margin-top: 10px;
-        position: relative;
-}
-.footer .row .newsletter form .newsletter-container input#newsletter-input{
-    width: 100%;
-    height: 32px;
-}
-.footer .row .newsletter form .description{
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif; 
-}
-.footer .row .newsletter form .button-submit{
-    position: absolute;
-    top: 28px;
-    right: 3px;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 25px 0;
+    line-height: normal;    
+    color: #fff;
 }
 
 
 /*css homepage*/
 
-.homepage .homepage-container{
+.homepage .homepage-container .slider,
+.homepage .homepage-container .three-point{
 	max-width: 1280px;
 	margin: 0 auto;
 	overflow: hidden;
 }
-.homepage .homepage-container .container{
-	max-width: 100%;
-	padding: 0px;
-	width: 1170px;
+.homepage .homepage-container .establish{
+    width: 1370px;
+    background: #233445;
+    padding: 20px;
+    overflow: hidden;
 }
+.homepage .homepage-container .establish .side{
+    width: 45%;
+    float: left;
+}
+.homepage .homepage-container .establish .side:first-child{
+    width: 45%;
+}
+.homepage .homepage-container .establish h3,
+.homepage .homepage-container .establish span{
+    color: #f6f30b;
+    width: 100%;
+    display: block;
+    text-align: right;
+    padding-right: 20px;
+}
+.homepage .homepage-container .establish h3{
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+.homepage .homepage-container .establish span{
+    font-size: 45px;    
+    line-height: 45px;
+}
+.homepage .homepage-container .establish p{
+    color: white;
+    font-size: 21px;
+    margin-top: 33px;
+    margin-bottom: 0px;
+}
+
+
+.homepage .homepage-container .ourproducts{
+    background: #233445;
+    margin-bottom: 20px;    
+    padding: 50px 0 60px;
+}
+.homepage .homepage-container .ourproducts > h3{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 25px 0;
+    line-height: normal;
+    max-width: 900px;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+.homepage .homepage-container .ourproducts .active{
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0px;
+}
+.homepage .homepage-container .ourproducts .active .gkImage{
+    float: left;
+    width: 31.8%;
+    margin: 0.75%;
+    padding: 15px;
+    background: white;
+}
+.homepage .homepage-container .ourproducts .active .gkImage:nth-child(3n+1){
+    clear: left;
+}
+.homepage .homepage-container .ourproducts .active .gkImage h4{
+    text-align: center;
+}
+.homepage .homepage-container .ourproducts .active .gkImage h4 a{
+    color: #282c2f;
+}
+.homepage .homepage-container .ourproducts .active .gkImage a img{
+    width: 100%;
+}
+
+
+
+
+
+
+.homepage .homepage-container .three-point{
+    overflow: hidden;
+}
+.homepage .homepage-container .three-point .custom{
+    width: calc(100%/3); 
+    float: left;
+    padding: 20px;
+}
+.homepage .homepage-container .three-point .custom img{
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.homepage .homepage-container .three-point .custom h3{
+    font-family: 'Roboto';
+    color: #4b5560;
+}
+.homepage .homepage-container .three-point .custom h3 strong{
+    font-weight: 500;
+}
+.homepage .homepage-container .three-point .custom h6{
+    font-size: 13px;
+}
+.homepage .homepage-container .three-point .custom h6 span{
+    color: #ff6600;
+}
+.homepage .homepage-container .three-point .custom p{
+    text-align: justify;
+}
+
+
+
 .homepage .homepage-container .container .show-all{
     text-align: right;
 }
