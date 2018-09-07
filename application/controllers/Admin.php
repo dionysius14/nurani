@@ -95,30 +95,14 @@ class Admin extends CI_Controller {
         $gc = new grocery_CRUD();
         $gc->set_subject('Produk');
         $gc->set_table('data_produk');
-        $gc->set_relation('kota_id', 'data_kota', 'kota_nama');
         $gc->change_field_type('produk_id', 'invisible');
-        $gc->display_as('kota_id', 'Kota');
         $gc->display_as('nama', 'Nama');
         $gc->display_as('logo', 'Logo');
         $gc->display_as('banner', 'Banner');
-        $gc->display_as('lokasi', 'Lokasi');
-        $gc->display_as('lokasi_maps_lat', 'Maps Latitude');
-        $gc->display_as('lokasi_maps_long', 'Maps Longitude');
-        $gc->display_as('lokasi_maps_lat_mkt', 'Office Maps Latitude');
-        $gc->display_as('lokasi_maps_long_mkt', 'Office Maps Longitude');
         $gc->display_as('deskripsi', 'Deskripsi');
-        $gc->display_as('marketing_office', 'Marketing Office');
-        $gc->display_as('link_fb', 'Link FB');
-        $gc->display_as('link_twitter', 'Link Instagram');
-        $gc->display_as('brosur', 'Brosur');
-		$gc->set_field_upload('brosur', 'assets/uploads/brosur');
-		$gc->set_field_upload('denah', 'assets/uploads/denah');
 		$gc->set_field_upload('logo', 'assets/uploads/logo');
-		$gc->set_field_upload('banner', 'assets/uploads/banner');
-        $gc->add_action('Produk', '', 'admin/gallery', 'fa-image');
-        $gc->add_action('Fasilitas', '', 'admin/fasilitas', 'fa-image');
-        $gc->add_action('Denah', '', 'admin/denah', 'fa-image');
-        $gc->required_fields('nama', 'lokasi', 'marketing_office','brosur');
+        $gc->set_field_upload('banner', 'assets/uploads/banner');
+        $gc->required_fields('nama', 'lokasi');
         $gc->unset_print();
         $output = $gc->render();
         $output->title = 'Data Produk | Web Admin';
@@ -148,28 +132,7 @@ class Admin extends CI_Controller {
         $output->notes = '<p><i></i></p>';
         $this->paint_slice($output);
     }
-    public function fasilitas($primary_key) {
-        $this->session->set_userdata('produk_id', $primary_key);
-        $this->mylib->checkloginadmin();
-        $gc = new grocery_CRUD();
-        $gc->set_subject('Fasilitas');
-        $gc->set_table('data_fasilitas');
-        $gc->where('produk_id', $primary_key);
-        $gc->change_field_type('produk_id', 'invisible');
-        $gc->display_as('foto', 'Foto');
-        $gc->display_as('caption', 'Caption');
-		$gc->set_field_upload('foto', 'assets/uploads/fasilitas');
-        $gc->required_fields('caption');
-        $gc->columns('foto', 'caption');
-        $gc->unset_print();
-        // $gc->unset_add();
-        $gc->callback_before_insert(array($this, 'callback_before_insert_fasilitas'));
-        $output = $gc->render();
-        $output->title = 'Data Fasilitas | Web Admin';
-        $output->subtitle = 'Data Fasilitas';
-        $output->notes = '<p><i></i></p>';
-        $this->paint_slice($output);
-    }
+    
     public function news() {
         $this->mylib->checkloginadmin();
         $gc = new grocery_CRUD();
@@ -190,39 +153,8 @@ class Admin extends CI_Controller {
         $output->notes = '<p><i></i></p>';
         $this->paint_slice($output);
     }
-    public function denah($primary_key) {
-        $this->session->set_userdata('produk_id', $primary_key);
-        $this->mylib->checkloginadmin();
-        $gc = new grocery_CRUD();
-        $gc->set_subject('Denah');
-        $gc->set_table('data_denah');
-        $gc->where('produk_id', $primary_key);
-        $gc->change_field_type('produk_id', 'invisible');
-        $gc->display_as('foto', 'Foto');
-        $gc->display_as('caption', 'Caption');
-		$gc->set_field_upload('foto', 'assets/uploads/denah');
-        $gc->required_fields('caption');
-        $gc->columns('foto', 'caption');
-        $gc->unset_print();
-        // $gc->unset_add();
-        $gc->callback_before_insert(array($this, 'callback_before_insert_denah'));
-        $output = $gc->render();
-        $output->title = 'Data Denah | Web Admin';
-        $output->subtitle = 'Data Denah';
-        $output->notes = '<p><i></i></p>';
-        $this->paint_slice($output);
-    }
+   
     function callback_before_insert_gallery($post_array)
-    {
-        $post_array['produk_id'] = $this->session->userdata('produk_id');
-        return $post_array;
-    }
-    function callback_before_insert_fasilitas($post_array)
-    {
-        $post_array['produk_id'] = $this->session->userdata('produk_id');
-        return $post_array;
-    }
-    function callback_before_insert_denah($post_array)
     {
         $post_array['produk_id'] = $this->session->userdata('produk_id');
         return $post_array;
@@ -264,7 +196,7 @@ class Admin extends CI_Controller {
                     $decoded = $this->encrypt->decode($user->user_password);
                     if ($decoded == $_POST['password']) {
                         $this->mylib->set_session_admin($user);
-                        redirect('admin/kota');
+                        redirect('admin/produk');
                     } else {
                         $common['false'] = 1;
                     }

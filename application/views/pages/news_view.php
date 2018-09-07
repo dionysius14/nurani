@@ -53,5 +53,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
                     <center><?php echo $this->pagination->create_links(); ?></center>
 	</div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<!-- TAB SAMPING BERISI LIST JUDUL ARTCLE TERBARU -->
+		<h1>Artikel Terbaru</h1><br/>
+	
+		<?php foreach($news_latest as $nl){?>
+			<span><a href="<?php echo site_url("newsdetail?id=".$nl->news_id.""); ?>"><u><?php echo $nl->news_judul; ?></a></u></a></span><br/>
+		<?php } ?>
 	</div>
 </div>

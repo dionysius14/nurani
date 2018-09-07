@@ -30,7 +30,7 @@ class Ourproject extends CI_Controller {
     public function index() {
         $this->session->set_userdata("last_url", "home");
         $common['title'] = 'Our Project';
-        $common['kota'] = $this->home_model->get_city();
+        $common['prd'] = $this->home_model->get_produkall();
         $common['slider'] = $this->home_model->get_slider_ourproject();
         $st = new Stencil();
         $st->layout('menu_layout');

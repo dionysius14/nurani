@@ -31,9 +31,6 @@ class Produk extends CI_Controller {
         $common['title'] = 'Produk';
 		$id = $this->input->get('id');
         $common['produk'] = $this->home_model->get_produkbyid($id);
-        $common['gallery'] = $this->home_model->get_gallerybyproduk($id);
-        $common['fasilitas'] = $this->home_model->get_fasilitasbyproduk($id);
-        $common['denah'] = $this->home_model->get_denahbyproduk($id);
         $st = new Stencil();
         // $st->layout('home_layout');
         $st->layout('product_layout');

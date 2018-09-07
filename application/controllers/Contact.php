@@ -29,7 +29,6 @@ class Contact extends CI_Controller {
     public function index() {
         $this->session->set_userdata("last_url", "contact");
         $common['title'] = 'Contact Us';
-        $common['city'] = $this->home_model->get_city();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');
