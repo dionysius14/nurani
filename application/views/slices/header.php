@@ -10,8 +10,17 @@
     <div class="header-menu" id="navbar">
         <ul class="nav navbar-nav navbar-center" align="center">
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("Profile"); ?>">Profile</a></li>
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("Ourproject"); ?>">Our Product</a></li>
+           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("Profile"); ?>">Our Profile</a></li>
+           <li class="list-menu category">
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("Ourproject"); ?>">Our Product</a>
+              <ul class="sub-category">
+                <li><a href="">sub-Category 1</a></li>
+                <li><a href="">sub-Category 2</a></li>
+                <li><a href="">sub-Category 3</a></li>
+                <li><a href="">sub-Category 4</a></li>
+                <li><a href="">sub-Category 5</a></li>
+              </ul>
+           </li>
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("News"); ?>">Article</a></li>
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a></li>
        </ul>
@@ -40,13 +49,17 @@
     $(document).ready(function ($) {
         var url = window.location.href;
         var activePage = url;
-        $('.navbar-nav .list-menu a').each(function () {
+        $('.navbar-nav .list-menu > a').each(function () {
             var linkPage = this.href;
 
             if (activePage == linkPage) {
                 $(this).closest("li").addClass("active");
             }
         });
+
+
+
+
     });
 
 </script>

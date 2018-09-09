@@ -71,73 +71,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<div class="ourproducts">
 			<h3>Our Product</h3>
-<!-- 			<div class="items">
-				<ul>
-					<?php foreach($latest as $dtl){?>
-					<li class="level1">
-						<a href="<?php echo site_url("produk?id=".$dtl->produk_id.""); ?>">
-							<div class="logo-container">
-								<img class="logo" src="<?php echo base_url(); ?>assets/uploads/logo/<?php echo $dtl->logo; ?>" />
-								<p><?php echo $dtl->nama; ?></p>
-							</div>
-							<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" />
-						</a>
-					</li>
-					<?php } ?>
-				</ul>
-			</div> -->
-
-
-
 			<div class="active">
-				<div class="gkImage">
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/css/public/default/img/homepage/product-list.CBMODIPALM-sludge-centrifugensp-121.png" alt="">
-					</a>
-					<h4>
-						<a href="/index.php/our-products/16-cbmodipalm/20-cbmodipalm-sludge-centrifuge">CB MODIPALM - SLUDGE CENTRIFUGE</a>
-					</h4>
-				</div>
-				<div class="gkImage">
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/css/public/default/img/homepage/product-list.CBMODIPALM-screw-pressnsp-121.png" alt="">
-					</a>
-					<h4>
-						<a href="/index.php/our-products/16-cbmodipalm/14-cb-modipalm-screw-press">CB MODIPALM - Screw Press</a>
-					</h4>
-				</div>
-				<div class="gkImage">
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/css/public/default/img/homepage/product-list.CBMODIPALM-SAND CYCLONEnsp-121.png" alt="">
-					</a>
-					<h4>
-						<a href="/index.php/our-products/16-cbmodipalm/13-cbmodipalm-sand-cyclone">CB MODIPALM - SAND CYCLONE</a>
-					</h4>
-				</div>
-				<div class="gkImage">
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/css/public/default/img/homepage/product-list.CBMODIPALM-ROTARY-BRUSH-STRAINERnsp-121.png" alt="">
-					</a>
-					<h4>
-						<a href="/index.php/our-products/16-cbmodipalm/12-cbmodipalm-rotary-brush-strainer">CB MODIPALM - ROTARY BRUSH STRAINER</a>
-					</h4>
-				</div>
-				<div class="gkImage">
-					<a href="#">
-						<img src="<?php echo base_url(); ?>assets/css/public/default/img/homepage/product-list.CBMODIPALM-ripple-millnsp-121.png" alt="">
-					</a>
-					<h4>
-						<a href="/index.php/our-products/16-cbmodipalm/11-cbmodipalm-ripple-mill-king-crackes">CB MODIPALM- Ripple Mill</a>
-					</h4>
-				</div>
-				<div class="gkImage">
-					<a href="/index.php/our-products/16-cbmodipalm/10-cbmodipalm-eriez-vibratory-feeders-36-c">
-						<img src="<?php echo base_url(); ?>assets/css/public/default/img/homepage/product-list.CBMODIPALM-eriez-vibratoryfeeders-36-cnsp-121.png" alt="">
-					</a>
-					<h4>
-						<a href="/index.php/our-products/16-cbmodipalm/10-cbmodipalm-eriez-vibratory-feeders-36-c">CB MODIPALM- Eriez Vibratory Feeders 36 c</a>
-					</h4>
-				</div>
+				<?php foreach($latest as $dtl){?>
+					<div class="gkImage">
+						<a href="#">
+							<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" alt="">
+						</a>
+						<h4>
+							<a href="<?php echo site_url("produk?id=".$dtl->produk_id.""); ?>"><?php echo $dtl->nama; ?></a>
+						</h4>
+					</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
