@@ -32,13 +32,14 @@ class News extends CI_Controller {
         $this->session->set_userdata("last_url", "home");
         $common['title'] = 'News';
         $common['profile'] = $this->home_model->get_profile();
-        $common['slider'] = $this->home_model->get_slider_news();
+        $common['slider'] = $this->home_model->get_slider_home();
         $common['news_latest'] = $this->home_model->get_news_latest();
+        $common['kategori'] = $this->home_model->get_kategori();
 		
 		$config['base_url'] = site_url('news/index/');
         $rows = $this->db->query('SELECT * FROM data_news ORDER BY news_date DESC')->result();
         $config['total_rows'] = count($rows);
-        $config['per_page'] = 3;
+        $config['per_page'] = 5;
         $config['use_page_numbers'] = FALSE;
         $config['num_links'] = 7;
         $config['next_link'] = '<i class="fa fa-fw fa-forward"></i>';

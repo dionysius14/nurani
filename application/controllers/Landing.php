@@ -27,7 +27,7 @@ class Landing extends CI_Controller {
 
     public function index() {
         $this->session->set_userdata("last_url", "landing");
-        $common['title'] = 'Indah &amp; Ismail Wedding';
+        $common['title'] = 'Nurani Jaya';
         $st = new Stencil();
         $st->layout('landing_layout');
         $st->slice('head_login');

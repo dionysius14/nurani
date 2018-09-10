@@ -29,6 +29,7 @@ class Contact extends CI_Controller {
     public function index() {
         $this->session->set_userdata("last_url", "contact");
         $common['title'] = 'Contact Us';
+        $common['kategori'] = $this->home_model->get_kategori();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');

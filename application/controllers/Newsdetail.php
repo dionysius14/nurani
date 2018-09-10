@@ -32,8 +32,9 @@ class Newsdetail extends CI_Controller {
         $common['title'] = 'Newsdetail';
 		$id = $this->input->get('id');
         $common['profile'] = $this->home_model->get_profile();
-        $common['slider'] = $this->home_model->get_slider_news();
+        $common['slider'] = $this->home_model->get_slider_home();
         $common['newsdetail'] = $this->home_model->get_newsbyid($id);
+        $common['kategori'] = $this->home_model->get_kategori();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');

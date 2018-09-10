@@ -30,7 +30,7 @@ class Faq extends CI_Controller {
         $this->session->set_userdata("last_url", "contact");
         $common['title'] = 'Faq';
         $common['profile'] = $this->home_model->get_profile();
-        $common['slider'] = $this->home_model->get_slider_faq();
+        $common['slider'] = $this->home_model->get_slider_home();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');

@@ -83,10 +83,25 @@ class Admin extends CI_Controller {
 		$gc->set_field_upload('banner_foto', 'assets/uploads/slider');
         $gc->unset_print();
         // $gc->unset_add();
-        $gc->unset_delete();
+        // $gc->unset_delete();
         $output = $gc->render();
-        $output->title = 'Slider| Web Admin';
+        $output->title = 'Slider | Web Admin';
         $output->subtitle = 'Slider';
+        $output->notes = '<p><i></i></p>';
+        $this->paint_slice($output);
+    }
+    public function kategori() {
+        $this->mylib->checkloginadmin();
+        $gc = new grocery_CRUD();
+        $gc->set_subject('Kategori');
+        $gc->set_table('data_kategori');
+        $gc->change_field_type('kategori_id', 'invisible');
+        $gc->display_as('kategori_nama', 'Kategori');
+        $gc->required_fields('kategori_nama');
+        $gc->unset_print();
+        $output = $gc->render();
+        $output->title = 'Data Kategori | Web Admin';
+        $output->subtitle = 'Data Kategori';
         $output->notes = '<p><i></i></p>';
         $this->paint_slice($output);
     }
@@ -95,7 +110,9 @@ class Admin extends CI_Controller {
         $gc = new grocery_CRUD();
         $gc->set_subject('Produk');
         $gc->set_table('data_produk');
+        $gc->set_relation('kategori_id', 'data_kategori', 'kategori_nama');
         $gc->change_field_type('produk_id', 'invisible');
+        $gc->display_as('kategori_id', 'Kategori');
         $gc->display_as('nama', 'Nama');
         $gc->display_as('logo', 'Logo');
         $gc->display_as('banner', 'Banner');

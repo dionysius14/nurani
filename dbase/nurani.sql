@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2018 at 10:49 AM
+-- Generation Time: Sep 10, 2018 at 03:33 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -138,65 +138,15 @@ INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activ
 CREATE TABLE `data_banner` (
   `banner_id` int(11) NOT NULL,
   `banner_foto` text,
-  `banner_link` varchar(255) NOT NULL,
-  `banner_page` enum('News','Home','Our Project','Profile','FAQ') NOT NULL
+  `banner_link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `data_banner`
 --
 
-INSERT INTO `data_banner` (`banner_id`, `banner_foto`, `banner_link`, `banner_page`) VALUES
-(1, '34f55-spanduk-marison-solo.png', 'http://local.sik.com/admin/slider/edit/1', 'Home'),
-(2, 'd1054-innercommercialbg.jpg', '', 'Profile'),
-(3, 'a3f30-innercommercialbg.jpg', '', 'FAQ'),
-(4, '08046-innercommercialbg.jpg', '', 'Our Project'),
-(5, '005f0-08046-innercommercialbg.jpg', '', 'News');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `data_denah`
---
-
-CREATE TABLE `data_denah` (
-  `denah_id` int(11) NOT NULL,
-  `produk_id` int(11) NOT NULL,
-  `foto` text NOT NULL,
-  `caption` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `data_denah`
---
-
-INSERT INTO `data_denah` (`denah_id`, `produk_id`, `foto`, `caption`) VALUES
-(1, 15, 'cb913-isi-2-edit.png', '<p>\r\n	denah ruang</p>\r\n');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `data_fasilitas`
---
-
-CREATE TABLE `data_fasilitas` (
-  `fasilitas_id` int(11) NOT NULL,
-  `produk_id` int(11) NOT NULL,
-  `foto` text NOT NULL,
-  `caption` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `data_fasilitas`
---
-
-INSERT INTO `data_fasilitas` (`fasilitas_id`, `produk_id`, `foto`, `caption`) VALUES
-(6, 14, '', '<div>\r\n	<p>\r\n		Fasilitas : CCTV dan Pos Satpam</p>\r\n</div>\r\n<p>\r\n	&nbsp;</p>\r\n'),
-(7, 15, '3ddf9-isi-1-edit.png', '<p>\r\n	fasilitas lengkap</p>\r\n'),
-(8, 18, '', '<p>\r\n	Pos Satpam</p>\r\n'),
-(9, 19, '', '<p>\r\n	Pos satpam dan Jalan utama 22 meter</p>\r\n'),
-(10, 20, '', '<div>\r\n	<p>\r\n		Fasilitas : Taman , Taman Berain ,Tempat Ibadah</p>\r\n</div>\r\n<p>\r\n	&nbsp;</p>\r\n'),
-(11, 23, '', '<div>\r\n	<p>\r\n		Fasilitas : Mushola , Jalan Utama 16 M2 , Pos Satpam Taman Bermain . Taman Pembibitan</p>\r\n</div>\r\n<p>\r\n	&nbsp;</p>\r\n');
+INSERT INTO `data_banner` (`banner_id`, `banner_foto`, `banner_link`) VALUES
+(1, 'a07ec-banner-sample.jpg', '#');
 
 -- --------------------------------------------------------
 
@@ -235,6 +185,26 @@ INSERT INTO `data_gallery` (`gallery_id`, `produk_id`, `foto`, `caption`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `data_kategori`
+--
+
+CREATE TABLE `data_kategori` (
+  `kategori_id` int(11) NOT NULL,
+  `kategori_nama` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data_kategori`
+--
+
+INSERT INTO `data_kategori` (`kategori_id`, `kategori_nama`) VALUES
+(1, 'Kategori 1'),
+(2, 'Kategori 2'),
+(3, 'Kategori 3');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `data_kontak`
 --
 
@@ -246,22 +216,12 @@ CREATE TABLE `data_kontak` (
   `kontak_keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `data_kota`
+-- Dumping data for table `data_kontak`
 --
 
-CREATE TABLE `data_kota` (
-  `kota_id` int(11) NOT NULL,
-  `kota_nama` varchar(255) NOT NULL,
-  `kota_telepon` varchar(100) NOT NULL,
-  `kota_lokasi` text NOT NULL,
-  `kota_logo` varchar(255) NOT NULL,
-  `maps_latitute` varchar(255) NOT NULL,
-  `maps_longitude` varchar(255) NOT NULL,
-  `kota_keterangan` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `data_kontak` (`kontak_id`, `kontak_nama`, `kontak_email`, `kontak_phone`, `kontak_keterangan`) VALUES
+(1, 'test', 'dion12345@gmail.com', '082135288638', 'test message');
 
 -- --------------------------------------------------------
 
@@ -282,8 +242,12 @@ CREATE TABLE `data_news` (
 --
 
 INSERT INTO `data_news` (`news_id`, `news_foto`, `news_judul`, `news_konten`, `news_date`) VALUES
-(1, '2e0af-maris-square-figur.png', 'SAMPLE NEWS', '<p>\r\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\r\n', '2018-05-01'),
-(2, '6e986-isi-1-edit.png', 'SAMPLE NEWS 2', '<p>\r\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\r\n', '2018-05-22');
+(3, '4aee2-download.jpg', 'sample news 1', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-10'),
+(4, 'b196c-download.jpg', 'sample news 2', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-10'),
+(5, '84fd3-download.jpg', 'sample news 3', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-09'),
+(6, '6d21f-download.jpg', 'sample news 4', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-09'),
+(7, 'cb61c-download.jpg', 'sample news 5', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-09'),
+(8, '43591-download.jpg', 'sample news 6', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-10');
 
 -- --------------------------------------------------------
 
@@ -293,21 +257,25 @@ INSERT INTO `data_news` (`news_id`, `news_foto`, `news_judul`, `news_konten`, `n
 
 CREATE TABLE `data_produk` (
   `produk_id` int(11) NOT NULL,
-  `kota_id` int(11) NOT NULL,
+  `kategori_id` int(11) NOT NULL,
   `logo` varchar(255) NOT NULL,
   `banner` varchar(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
-  `lokasi` text NOT NULL,
-  `deskripsi` text NOT NULL,
-  `link_fb` varchar(255) NOT NULL,
-  `link_twitter` varchar(255) NOT NULL,
-  `brosur` varchar(255) NOT NULL,
-  `marketing_office` text,
-  `lokasi_maps_lat` varchar(255) DEFAULT NULL,
-  `lokasi_maps_long` varchar(255) NOT NULL,
-  `lokasi_maps_lat_mkt` varchar(20) NOT NULL,
-  `lokasi_maps_long_mkt` varchar(20) NOT NULL
+  `deskripsi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data_produk`
+--
+
+INSERT INTO `data_produk` (`produk_id`, `kategori_id`, `logo`, `banner`, `nama`, `deskripsi`) VALUES
+(2, 1, '073f2-new_product-600x600.jpg', '75d86-new_product-600x600.jpg', 'produk 1', '<p>\n	produk 1</p>\n'),
+(3, 1, 'e31b8-new_product-600x600.jpg', 'c586f-new_product-600x600.jpg', 'produk 2', ''),
+(4, 1, 'bc519-new_product-600x600.jpg', 'be9ca-new_product-600x600.jpg', 'produk 3', ''),
+(5, 1, '3bd6c-new_product-600x600.jpg', '068c5-new_product-600x600.jpg', 'produk 4', ''),
+(6, 1, '4ded0-new_product-600x600.jpg', '30443-new_product-600x600.jpg', 'produk 5', ''),
+(7, 2, '9f047-new_product-600x600.jpg', '870ec-new_product-600x600.jpg', 'produk 6', ''),
+(8, 3, '2aad4-new_product-600x600.jpg', '24346-new_product-600x600.jpg', 'produk 7', '');
 
 -- --------------------------------------------------------
 
@@ -327,23 +295,6 @@ CREATE TABLE `data_profile` (
 
 INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `overview`) VALUES
 (1, '<p>\r\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\r\n', '<p>\r\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\r\n');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `data_rsvp`
---
-
-CREATE TABLE `data_rsvp` (
-  `rsvp_id` int(11) NOT NULL,
-  `rsvp_name` varchar(255) NOT NULL,
-  `rsvp_phone` varchar(30) NOT NULL,
-  `rsvp_attending` varchar(10) NOT NULL,
-  `rsvp_state` varchar(50) NOT NULL,
-  `rsvp_zip` int(11) NOT NULL,
-  `rsvp_email` varchar(255) DEFAULT NULL,
-  `rsvp_address` text
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -411,34 +362,22 @@ ALTER TABLE `data_banner`
   ADD PRIMARY KEY (`banner_id`);
 
 --
--- Indexes for table `data_denah`
---
-ALTER TABLE `data_denah`
-  ADD PRIMARY KEY (`denah_id`);
-
---
--- Indexes for table `data_fasilitas`
---
-ALTER TABLE `data_fasilitas`
-  ADD PRIMARY KEY (`fasilitas_id`);
-
---
 -- Indexes for table `data_gallery`
 --
 ALTER TABLE `data_gallery`
   ADD PRIMARY KEY (`gallery_id`);
 
 --
+-- Indexes for table `data_kategori`
+--
+ALTER TABLE `data_kategori`
+  ADD PRIMARY KEY (`kategori_id`);
+
+--
 -- Indexes for table `data_kontak`
 --
 ALTER TABLE `data_kontak`
   ADD PRIMARY KEY (`kontak_id`);
-
---
--- Indexes for table `data_kota`
---
-ALTER TABLE `data_kota`
-  ADD PRIMARY KEY (`kota_id`);
 
 --
 -- Indexes for table `data_news`
@@ -457,12 +396,6 @@ ALTER TABLE `data_produk`
 --
 ALTER TABLE `data_profile`
   ADD PRIMARY KEY (`profile_id`);
-
---
--- Indexes for table `data_rsvp`
---
-ALTER TABLE `data_rsvp`
-  ADD PRIMARY KEY (`rsvp_id`);
 
 --
 -- Indexes for table `data_user`
@@ -486,50 +419,35 @@ ALTER TABLE `setting_tema`
 ALTER TABLE `data_banner`
   MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `data_denah`
---
-ALTER TABLE `data_denah`
-  MODIFY `denah_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `data_fasilitas`
---
-ALTER TABLE `data_fasilitas`
-  MODIFY `fasilitas_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
---
 -- AUTO_INCREMENT for table `data_gallery`
 --
 ALTER TABLE `data_gallery`
   MODIFY `gallery_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
+-- AUTO_INCREMENT for table `data_kategori`
+--
+ALTER TABLE `data_kategori`
+  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT for table `data_kontak`
 --
 ALTER TABLE `data_kontak`
-  MODIFY `kontak_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `data_kota`
---
-ALTER TABLE `data_kota`
-  MODIFY `kota_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `kontak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `data_news`
 --
 ALTER TABLE `data_news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `data_produk`
 --
 ALTER TABLE `data_produk`
-  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `data_profile`
 --
 ALTER TABLE `data_profile`
   MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `data_rsvp`
---
-ALTER TABLE `data_rsvp`
-  MODIFY `rsvp_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `data_user`
 --

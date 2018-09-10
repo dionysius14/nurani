@@ -10,18 +10,16 @@
     <div class="header-menu" id="navbar">
         <ul class="nav navbar-nav navbar-center" align="center">
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("Profile"); ?>">Our Profile</a></li>
+           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a></li>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("Ourproject"); ?>">Our Product</a>
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="#">Our Product</a>
               <ul class="sub-category">
-                <li><a href="">sub-Category 1</a></li>
-                <li><a href="">sub-Category 2</a></li>
-                <li><a href="">sub-Category 3</a></li>
-                <li><a href="">sub-Category 4</a></li>
-                <li><a href="">sub-Category 5</a></li>
+              <?php foreach($kategori as $kt){?>
+                <li><a href="<?php echo site_url("ourproduct/setkategori?id=".$kt->kategori_id.""); ?>"><?php echo $kt->kategori_nama; ?></a></li>
+              <?php } ?>
               </ul>
            </li>
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("News"); ?>">Article</a></li>
+           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">Article</a></li>
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a></li>
        </ul>
    </div>

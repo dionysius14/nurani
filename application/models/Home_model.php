@@ -18,38 +18,15 @@ class Home_model extends CI_Model {
         $query = $this->db->get();
         return $query->row();
     }
+    function get_kategori() {
+        $this->db->select();
+        $this->db->from('data_kategori');
+        $query = $this->db->get();
+        return $query->result();
+    }
 	function get_slider_home() {
         $this->db->select();
         $this->db->from('data_banner');
-        $this->db->where('banner_page', 'Home');
-        $query = $this->db->get();
-        return $query->result();
-    }
-	function get_slider_profile() {
-        $this->db->select();
-        $this->db->from('data_banner');
-        $this->db->where('banner_page', 'Profile');
-        $query = $this->db->get();
-        return $query->result();
-    }
-	function get_slider_ourproject() {
-        $this->db->select();
-        $this->db->from('data_banner');
-        $this->db->where('banner_page', 'Our Project');
-        $query = $this->db->get();
-        return $query->result();
-    }
-	function get_slider_faq() {
-        $this->db->select();
-        $this->db->from('data_banner');
-        $this->db->where('banner_page', 'Faq');
-        $query = $this->db->get();
-        return $query->result();
-    }
-	function get_slider_news() {
-        $this->db->select();
-        $this->db->from('data_banner');
-        $this->db->where('banner_page', 'News');
         $query = $this->db->get();
         return $query->result();
     }
@@ -60,10 +37,17 @@ class Home_model extends CI_Model {
         $query = $this->db->get();
         return $query->row();
     }
+    function get_produkbykat($kategori_id) {
+        $this->db->select();
+        $this->db->from('data_produk');
+        $this->db->where('kategori_id', $kategori_id);
+        $query = $this->db->get();
+        return $query->result();
+    }
 	function get_produklatest() {
         $this->db->select();
         $this->db->from('data_produk');
-		$this->db->limit(8);
+		$this->db->limit(6);
         $query = $this->db->get();
         return $query->result();
     }

@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript">
     function initMap() {
         // The location of GB
-        var gb = {lat: -7.801131, lng: 110.320307};
+        var gb = {lat: 0.4920993, lng: 101.4842535};
         // The map, centered at GB
         var map = new google.maps.Map(
             document.getElementById('map'), {zoom: 18, center: gb, mapTypeId: google.maps.MapTypeId.ROADMAP});
@@ -48,9 +48,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             // icon: iconBase + 'marker1.png',
             title: "Nurani Jaya"
         });
+
         var content = '<div>' +
-            '<div class="map-title"><strong>Golden Battery</strong></div>' +
-            '<div class="map-content"><span>Jl. Solo, Yogyakarta</span></div>' +
+            '<div class="map-title"><strong>CV Nurani Jaya</strong></div>' +
+            '<div class="map-content"><span>JL. BUKIT BARISAN NO 20, TENAYAN RAYA, TANGKERANG TIMUR, PEKANBARU RIAU 28131 (DEPAN SMU NEGERI 10 PEKANBARU) </span></div>' +
             '</div>';
 
         var infowindow = new google.maps.InfoWindow({

@@ -33,6 +33,7 @@ class Home extends CI_Controller {
         $common['latest'] = $this->home_model->get_produklatest();
         $common['slider'] = $this->home_model->get_slider_home();
         $common['profile'] = $this->home_model->get_profile();
+        $common['kategori'] = $this->home_model->get_kategori();
         $st = new Stencil();
         $st->layout('home_layout');
         $st->slice('head');
