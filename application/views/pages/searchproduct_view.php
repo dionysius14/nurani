@@ -5,24 +5,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="ourproduct">
 	<nav class="ourproduct-container">
 	    <div class="container">
-	    	<h3>Produk</h3>
+	    	<h3>Hasil pencarian dengan keyword "<?php echo $this->session->userdata('keyword'); ?>"</h3>
 			<div class="toolbar">
-				<div class="limit"> 
-        			<center><?php echo $this->pagination->create_links(); ?></center>
+				<div class="pages"> 
+        			<?php echo $this->pagination->create_links(); ?>
 				</div>
-				<div>
-					<h3><i>hasil pencarian dengan keyword... <?php echo $this->session->userdata('keyword'); ?></i></h3>
-				</div>
+			</div>
 			<ul class="items">
 				<?php if(count($produk)>0){?>
 				<?php foreach($produk as $dtl){?>
 					<li class="item">
-						<a href="#">
-							<img class="logo" src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" />
-							<h4>
-								<?php echo $dtl->nama; ?>
-							</h4>
-						</a>
+						<img class="logo" src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" />
+						<h4>
+							<?php echo $dtl->nama; ?>
+						</h4>
 					</li>
 				<?php } }else{  ?>
 					<span><center>----- Produk tidak Ditemukan -----</center></span>

@@ -7,12 +7,16 @@
         </div>
         <div id="google_translate_element"></div>
     </div>
+    <div class="mobile-menu">
+      <i class="fa fa-menu"></i>
+      <span>Menu</span>
+    </div>
     <div class="header-menu" id="navbar">
         <ul class="nav navbar-nav navbar-center" align="center">
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
            <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a></li>
            <li class="list-menu category">
-              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="#">Our Product</a>
+              <span class="page-scroll handlee">Our Product</span>
               <ul class="sub-category">
               <?php foreach($kategori as $kt){?>
                 <li><a href="<?php echo site_url("ourproduct/setkategori?id=".$kt->kategori_id.""); ?>"><?php echo $kt->kategori_nama; ?></a></li>
@@ -26,6 +30,7 @@
 </div>
 
 <script type="text/javascript">
+  if ($(window).width() > 768){
     // When the user scrolls the page, execute myFunction 
     window.onscroll = function() {myFunction()};
 
@@ -43,21 +48,26 @@
         navbar.classList.remove("sticky");
       }
     }
+  }
+  $(document).ready(function ($) {
+      var url = window.location.href;
+      var activePage = url;
+      $('.navbar-nav .list-menu > a').each(function () {
+          var linkPage = this.href;
 
-    $(document).ready(function ($) {
-        var url = window.location.href;
-        var activePage = url;
-        $('.navbar-nav .list-menu > a').each(function () {
-            var linkPage = this.href;
-
-            if (activePage == linkPage) {
-                $(this).closest("li").addClass("active");
-            }
+          if (activePage == linkPage) {
+              $(this).closest("li").addClass("active");
+          }
+      });
+      $('.mobile-menu').click(function () {
+        $('.header-menu').toggleClass('active');
+        $(this).toggleClass('active');
+      });
+      if ($(window).width() < 481){
+        $('.list-menu.category').click(function () {
+            $('.list-menu.category .sub-category').toggleClass("active");
         });
-
-
-
-
-    });
+      }
+  });
 
 </script>

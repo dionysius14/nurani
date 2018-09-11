@@ -15,7 +15,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>	
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
-				jQuery('.bxslider').bxSlider();
+				jQuery('.bxslider').bxSlider({
+					auto: true
+				});
 			});
 		</script>
 
