@@ -16,7 +16,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
 				jQuery('.bxslider').bxSlider({
-					auto: true
+					auto: true,
+					speed: 700
 				});
 			});
 		</script>
@@ -72,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 		<div class="ourproducts">
-			<h3>Our Product</h3>
+			<h3>Our Products</h3>
 			<div class="active">
 				<?php foreach($latest as $dtl){?>
 					<div class="gkImage">
@@ -85,6 +86,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				<?php } ?>
 			</div>
+		</div>
+
+		<div class="social">
+			<ul>
+				<li><a href=""><i class="tw"></i></a></li>
+				<li><a href=""><i class="fb"></i></a></li>
+				<li><a href=""><i class="ig"></i></a></li>
+				<li><a href=""><i class="ytube"></i></a></li>
+			</ul>
 		</div>
 	</div>
 </div>

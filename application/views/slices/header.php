@@ -1,31 +1,36 @@
 <div class="header">
     <div class="upper">
-        <div class="logo">
-            <a href="<?php echo base_url(); ?>">
-                <img src="<?php echo base_url(); ?>\assets\css\public\default\img\logonurani.jpg">
-            </a>
-        </div>
+      <div class="container">
+        <div class="text-above">CV. NURANI JAYA | PT. NURANI JAYA ENERGI</div>
         <div id="google_translate_element"></div>
+      </div>
+    </div>
+    <div class="logo-mobile">
+      <a href="<?php echo base_url(); ?>">
+          <img src="<?php echo base_url(); ?>\assets\css\public\default\img\logonurani.png">
+      </a>
     </div>
     <div class="mobile-menu">
       <i class="fa fa-menu"></i>
       <span>Menu</span>
     </div>
     <div class="header-menu" id="navbar">
-        <ul class="nav navbar-nav navbar-center" align="center">
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a></li>
-           <li class="list-menu category">
-              <span class="page-scroll handlee">Our Product</span>
-              <ul class="sub-category">
-              <?php foreach($kategori as $kt){?>
-                <li><a href="<?php echo site_url("ourproduct/setkategori?id=".$kt->kategori_id.""); ?>"><?php echo $kt->kategori_nama; ?></a></li>
-              <?php } ?>
-              </ul>
-           </li>
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">Article</a></li>
-           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a></li>
-       </ul>
+        <div class="container">
+          <div class="logo">
+            <a href="<?php echo base_url(); ?>">
+                <img src="<?php echo base_url(); ?>\assets\css\public\default\img\logonurani.png">
+            </a>
+          </div>
+          <ul class="nav navbar-nav navbar-center" align="center">
+             <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
+             <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a></li>
+             <li class="list-menu category">
+                <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Our Product</a>
+             </li>
+             <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">Article</a></li>
+             <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a></li>
+         </ul>
+        </div>
    </div>
 </div>
 
