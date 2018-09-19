@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="news container">
 	<div class="content">
 		<div class="news-container">
-			<div class="news-items">
+			<div class="news-items well">
 				<div class="item">
 					<h2><?php echo $newsdetail->news_judul; ?></h2>
 					<div class="date">

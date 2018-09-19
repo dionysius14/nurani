@@ -1,7 +1,7 @@
 <div class="header">
     <div class="upper">
       <div class="container">
-        <div class="text-above">CV. NURANI JAYA | PT. NURANI JAYA ENERGI</div>
+        <div class="text-above"><b>CV. NURANI JAYA | PT. NURANI JAYA ENERGI</b></div>
         <div id="google_translate_element"></div>
       </div>
     </div>
@@ -25,7 +25,7 @@
              <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
              <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a></li>
              <li class="list-menu category">
-                <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Our Product</a>
+                <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Our Products</a>
              </li>
              <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">Article</a></li>
              <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a></li>

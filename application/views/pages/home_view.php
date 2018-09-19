@@ -73,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 		<div class="ourproducts">
-			<h3>Our Products</h3>
+			<h3>Our Latest Products</h3>
 			<div class="active">
 				<?php foreach($latest as $dtl){?>
 					<div class="gkImage">
@@ -87,13 +87,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<?php } ?>
 			</div>
 		</div>
-
 		<div class="social">
 			<ul>
-				<li><a href=""><i class="tw"></i></a></li>
-				<li><a href=""><i class="fb"></i></a></li>
-				<li><a href=""><i class="ig"></i></a></li>
-				<li><a href=""><i class="ytube"></i></a></li>
+				<li><a href="<?php echo $profile->link_tw; ?>" ><i class="tw"></i></a></li>
+				<li><a href="<?php echo $profile->link_fb; ?>" ><i class="fb"></i></a></li>
+				<li><a href="<?php echo $profile->link_ig; ?>" ><i class="ig"></i></a></li>
+				<li><a href="<?php echo $profile->link_yt; ?>" ><i class="ytube"></i></a></li>
 			</ul>
 		</div>
 	</div>

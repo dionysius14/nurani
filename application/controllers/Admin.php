@@ -30,7 +30,7 @@ class Admin extends CI_Controller {
     public function index() {
         $this->mylib->checkloginadmin();
         $this->session->set_userdata("last_url", "admin");
-        redirect('admin/kota');
+        redirect('admin/profile');
     }
 
     public function dashboard() {
@@ -62,6 +62,10 @@ class Admin extends CI_Controller {
         $gc->set_table('data_profile');
         $gc->display_as('profile_ket', 'Profile');
         $gc->display_as('overview', 'Company Overview');
+        $gc->display_as('link_fb', 'Link Facebook');
+        $gc->display_as('link_tw', 'Link Twitter');
+        $gc->display_as('link_yt', 'Link Youtube');
+        $gc->display_as('link_ig', 'Link Instagram');
         $gc->required_fields('profile_ket','overview');
         $gc->unset_print();
         $gc->unset_add();

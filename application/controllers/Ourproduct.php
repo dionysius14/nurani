@@ -33,9 +33,16 @@ class Ourproduct extends CI_Controller {
         // $id = $this->input->get('id');
         
         $config['base_url'] = site_url('ourproduct/index/');
-        $rows = $this->db->query('SELECT * FROM data_produk WHERE kategori_id = '.$this->session->userdata('kategori_id').' ORDER BY produk_id DESC')->result();
+		$kategori_id = $this->session->userdata('kategori_id');
+		if($kategori_id != ''){
+			$rows = $this->db->query('SELECT * FROM data_produk WHERE kategori_id = '.$kategori_id.' ORDER BY produk_id DESC')->result();
+			$common['nama_kategori'] = $this->home_model->get_kategori_by_id($kategori_id);			
+		}else{
+			$rows = $this->db->query('SELECT * FROM data_produk ORDER BY produk_id DESC')->result();
+			$common['nama_kategori'] = "All Products";		
+		}
         $config['total_rows'] = count($rows);
-        $config['per_page'] = 3;
+        $config['per_page'] = 8;
         $config['use_page_numbers'] = FALSE;
         $config['num_links'] = 7;
         $config['next_link'] = '<i class="fa fa-fw fa-forward"></i>';
@@ -59,7 +66,13 @@ class Ourproduct extends CI_Controller {
         } else {
             $page = 0;
         }
-        $common['produk'] = $this->db->query('SELECT * FROM data_produk WHERE kategori_id = '.$this->session->userdata('kategori_id').' ORDER BY produk_id DESC LIMIT ' . $page . ',' . $config['per_page'])->result();
+		if($kategori_id != ''){
+			$common['produk'] = $this->db->query('SELECT * FROM data_produk WHERE kategori_id = '.$kategori_id.' ORDER BY produk_id DESC LIMIT ' . $page . ',' . $config['per_page'])->result();
+			
+		}else{
+			$common['produk'] = $this->db->query('SELECT * FROM data_produk ORDER BY produk_id DESC LIMIT ' . $page . ',' . $config['per_page'])->result();
+			
+		}
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');

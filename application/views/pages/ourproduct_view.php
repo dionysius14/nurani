@@ -5,9 +5,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="ourproduct">
 	<div class="ourproduct-container">
 	    <div class="container">
-	    	<h3>Produk</h3>
+	    	<h3>Products</h3>
 	    	<div class="sidebar-category">
-	    		<h3>Category List</h3>
+	    		<h3  class="well">Category List</h3>
 	    		<ul>
 	                <?php foreach($kategori as $kt){?>
 	                  <li><a href="<?php echo site_url("ourproduct/setkategori?id=".$kt->kategori_id.""); ?>"><?php echo $kt->kategori_nama; ?></a></li>
@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    		</ul>
 	    	</div>
 	    	<div class="main">
-	    		<h3>Nama Kategori</h3>
+	    		<h3  class="well"><?php echo $nama_kategori->kategori_nama; ?></h3>
 				<div class="toolbar">
 					<div class="search">
 						<?php echo form_open('ourproduct/search', 'id="form_add"'); ?>

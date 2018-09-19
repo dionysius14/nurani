@@ -24,6 +24,13 @@ class Home_model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+    function get_kategori_by_id($kategori_id) {
+        $this->db->select();
+        $this->db->from('data_kategori');
+        $this->db->where('kategori_id', $kategori_id);
+        $query = $this->db->get();
+        return $query->row();
+    }
 	function get_slider_home() {
         $this->db->select();
         $this->db->from('data_banner');

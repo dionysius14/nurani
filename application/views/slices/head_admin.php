@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="utf-8">
 <title><?php echo ucwords($title); ?></title>
 <?php echo chrome_frame(); ?>
-<?php echo favicons(); ?>
+<link rel="icon" href="<?php echo base_url(); ?>/assets/img/icons/as.png" type="image/x-icon" />
 <?php echo view_port(); ?>
 <?php echo apple_mobile(); ?>
 <?php

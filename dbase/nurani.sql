@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2018 at 03:33 PM
+-- Generation Time: Sep 19, 2018 at 05:24 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -146,7 +146,7 @@ CREATE TABLE `data_banner` (
 --
 
 INSERT INTO `data_banner` (`banner_id`, `banner_foto`, `banner_link`) VALUES
-(1, 'a07ec-banner-sample.jpg', '#');
+(1, '81620-milan-construction-banner-8.jpg', '#');
 
 -- --------------------------------------------------------
 
@@ -198,9 +198,32 @@ CREATE TABLE `data_kategori` (
 --
 
 INSERT INTO `data_kategori` (`kategori_id`, `kategori_nama`) VALUES
-(1, 'Kategori 1'),
-(2, 'Kategori 2'),
-(3, 'Kategori 3');
+(1, 'Head Protection'),
+(2, 'Ear Protection'),
+(3, 'Eye Protection'),
+(4, 'Face Protection'),
+(5, 'Safety Shoes'),
+(6, 'Hand Protection'),
+(7, 'Safety Vest'),
+(8, 'Respirator Protection'),
+(9, 'Aluminized Protection'),
+(10, 'Vertical Rescue / Fall Protection'),
+(11, 'Marine / Alat Kapal'),
+(12, 'Fire Protection'),
+(13, 'Traffic / Other'),
+(14, 'Safety Lock Out'),
+(15, 'Welding Jacket'),
+(16, 'Apron (Body Protection)'),
+(17, 'Stainless Steel & Carbon Steel Valves'),
+(18, 'Power Transmission Product'),
+(19, 'Palm Oil Mill General Parts'),
+(20, 'Industrial Chemical'),
+(21, 'Laboratory Equipment'),
+(22, 'Filter Media and Equipment'),
+(23, 'Reagent for Water Analysis'),
+(24, 'Aerator'),
+(25, 'Preassure and Temp Gauge'),
+(26, 'Packing and Gasket');
 
 -- --------------------------------------------------------
 
@@ -242,7 +265,7 @@ CREATE TABLE `data_news` (
 --
 
 INSERT INTO `data_news` (`news_id`, `news_foto`, `news_judul`, `news_konten`, `news_date`) VALUES
-(3, '4aee2-download.jpg', 'sample news 1', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-10'),
+(3, '4aee2-download.jpg', 'Keunggulan CV. NJE sebagai supplier Pabrik Kelapa Sawit (PKS)', '<section class=\"entry-content\">\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #000000;\">Mesin kelapa sawit memiliki peranan yang sangat penting di dalam sebuah pabrik pengolahan kelapa sawit. Ada berbagai jenis mesin canggih dibutuhkan di sana untuk melancarkan proses produksi kelapa sawit agar menghasilkan minyak. Memiliki mesin canggih pada sebuah pabrik adalah suatu bentuk investasi, karena harga mesin itu sendiri pun tidaklah murah. Sehingga melakukan perawatan terhadap mesin sangatlah penting dilakukan, jika terjadi kerusakan anda bisa menghubungi kami. Kami jual sparepart mesin pabrik sawit orisinil dan terjamin kualitasnya.</span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #000000;\">Dengan pengalaman kami dibidang industry kelapa sawit, kami memiliki sparepart ready stock dan teknisi untuk membantu anda. Kami akan memberikan layanan terbaik bagi anda, selain jual sparepart mesin PKS orisinil kami akan memberikan anda layanan purna jual. Ada banyak keunggulan yang kami miliki sebagai perusahaan penyedia mesin PKS dan sparepartnya, seperti di bawah ini.</span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-family: \'arial black\', \'avant garde\'; color: #000000; font-size: 14pt;\"><strong>5 Keunggulan Perusahaan Kami</strong></span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #000000;\">Perusahaan kami menyediakan mesin dan sparepart berkualitas yang orisinil untuk industry kelapa sawit. Berikut kelebihan perusahaan kami dalam hal penyediaan mesin pks dan sparepartnya untuk industri PKS, yaitu:</span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-family: \'arial black\', \'avant garde\'; color: #000000;\"><strong><span style=\"font-size: 13.5pt;\">1. Menyediakan Mesin Dengan Teknologi Terkini</span></strong></span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #000000;\">Kami mensuplai pabrik pengolahan kelapa sawit anda dengan teknologi terkini dalam bidang insdustri kelapa sawit. Mesin yang mampu untuk membantu anda mencapai tujuan dan target pengolahan kelapa sawit anda. Karena tanpa menggunakan mesin canggih untuk pengolahan kelapa sawit, mustahil hasil pengolahan kelapa sawit anda akan memenuhi target</span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-family: \'arial black\', \'avant garde\'; color: #000000;\"><strong><span style=\"font-size: 13.5pt;\">2. Mengetahui Brand Mesin PKS Yang Reliable</span></strong></span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #000000;\">Dengan pengalaman kami yang sudah berpuluh-puluhan tahun, kami tahu mesin pengolahan yang baik dan reliable bagi konsumen. Banyak brand ternama yang mampu kami sediakan untuk perusahaan pengolahan anda. </span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-family: \'arial black\', \'avant garde\'; color: #000000;\"><strong><span style=\"font-size: 13.5pt;\">3. Menyediakan Sparepart Untuk Mesin Yang Mengalami Kerusakan</span></strong></span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #000000;\">Jika mesin anda mengalami kerusakan atau masalah saat digunakan untuk proses pengolahan kelapa sawit, serahkan kepada kami. Kami jual sparepart asli mesin pabrik sawit ready stock untuk perbaikan mesin yang mengalami kerusakan. Sehingga jalannya operasional perusahaan tidak terganggu dalam waktu yang lama.</span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-family: \'arial black\', \'avant garde\'; color: #000000;\"><strong><span style=\"font-size: 13.5pt;\">4. Memberikan Layanan Purna Jual</span></strong></span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-size: 12pt; font-family: arial, helvetica, sans-serif; color: #000000;\">Teknisi kami telah terlatih, akan membantu cek dan mengganti sparepart yang rusak dengan yang baru dan orisinil. Dan akan memastikan mesin pengolahan kelapa sawit anda dapat bekerja kembali dengan baik untuk memproses kelapa sawit anda. Sebelum melakukan pergantian sparepart anda bisa melakukan konsultasi terlebih dahulu agar tindakan yang dilakukan sesuai.</span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-family: \'arial black\', \'avant garde\'; color: #000000;\"><strong><span style=\"font-size: 13.5pt;\">5. Dapat Memenuhi Semua Kebutuhan Mesin Untuk Industi PKS</span></strong></span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-family: arial, helvetica, sans-serif; color: #000000;\"><span style=\"font-size: 12pt;\">Dengan pengalaman kami yang sangat lama di bidang industr</span><span style=\"font-size: 12pt;\">i</span><span style=\"font-size: 12pt;\"> kelapa sawit ini, maka kami mengetahui dengan baik mesin apa saja yang dibutuhkan. Dalam melakukan proses kelapa sawit menjadi minyak, banyak sekali mesin penunjang yang dibutuhkan. Kami dapat menyediakan semuanya untuk anda sehingga proses pembuatan minyak kelapa sawit menjadi lebih mudah. Selain menyediakan mesinnya kami jual onderdil mesin pabrik kelapa sawit asli untuk anda, jika mesin mengalami gangguan.</span></span></p>\r\n	<p style=\"text-align: justify; line-height: normal;\">\r\n		<span style=\"font-family: arial, helvetica, sans-serif; color: #000000;\"><span style=\"font-size: 12pt;\">Jadi jangan ragu lagi untuk menghubungi kontak perusahaan kami dan dapatkan layanan terbaik dari kami. Kami telah berpengalaman puluhan tahun di</span><span style=\"font-size: 12pt;\"> </span><span style=\"font-size: 12pt;\">bidang ini, percayakan kebutuhan mesin PKS anda dan sparepartnya pada perusahaan kami, maka kami akan memberikan yang terbaik untuk anda. Karena kami jual onderdil asli mesin PKS untuk perbaikan mesin PKS anda. Segera hubungi kontak perusahaan kami yang tersedia di website ini dan dapatkan layanan terbaik dari kami.</span></span></p>\r\n</section>\r\n', '2018-09-10'),
 (4, 'b196c-download.jpg', 'sample news 2', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-10'),
 (5, '84fd3-download.jpg', 'sample news 3', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-09'),
 (6, '6d21f-download.jpg', 'sample news 4', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '2018-09-09'),
@@ -269,13 +292,13 @@ CREATE TABLE `data_produk` (
 --
 
 INSERT INTO `data_produk` (`produk_id`, `kategori_id`, `logo`, `banner`, `nama`, `deskripsi`) VALUES
-(2, 1, '073f2-new_product-600x600.jpg', '75d86-new_product-600x600.jpg', 'produk 1', '<p>\n	produk 1</p>\n'),
-(3, 1, 'e31b8-new_product-600x600.jpg', 'c586f-new_product-600x600.jpg', 'produk 2', ''),
-(4, 1, 'bc519-new_product-600x600.jpg', 'be9ca-new_product-600x600.jpg', 'produk 3', ''),
-(5, 1, '3bd6c-new_product-600x600.jpg', '068c5-new_product-600x600.jpg', 'produk 4', ''),
-(6, 1, '4ded0-new_product-600x600.jpg', '30443-new_product-600x600.jpg', 'produk 5', ''),
-(7, 2, '9f047-new_product-600x600.jpg', '870ec-new_product-600x600.jpg', 'produk 6', ''),
-(8, 3, '2aad4-new_product-600x600.jpg', '24346-new_product-600x600.jpg', 'produk 7', '');
+(2, 1, '1f6d2-images-1-.jpg', '36d38-images-1-.jpg', 'produk 1', '<p>\n	produk 1</p>\n'),
+(3, 1, '224da-fg01740-1-600x600.jpg', '61970-fg01740-1-600x600.jpg', 'produk 2', ''),
+(4, 1, '6261e-images-2-.jpg', 'b2c39-images-2-.jpg', 'produk 3', ''),
+(5, 1, 'd97be-images-3-.jpg', '22f6b-images-3-.jpg', 'produk 4', ''),
+(6, 1, 'e0a8d-images-4-.jpg', '147c1-images-4-.jpg', 'produk 5', ''),
+(7, 1, '3ce94-images.jpg', '217ca-images.jpg', 'produk 6', ''),
+(8, 3, '0917f-kpx7803esd-600x600.jpg', '10742-kpx7803esd-600x600.jpg', 'produk 7', '');
 
 -- --------------------------------------------------------
 
@@ -286,15 +309,19 @@ INSERT INTO `data_produk` (`produk_id`, `kategori_id`, `logo`, `banner`, `nama`,
 CREATE TABLE `data_profile` (
   `profile_id` int(11) NOT NULL,
   `profile_ket` text,
-  `overview` text
+  `overview` text,
+  `link_ig` varchar(255) NOT NULL,
+  `link_tw` varchar(255) NOT NULL,
+  `link_fb` varchar(255) NOT NULL,
+  `link_yt` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `data_profile`
 --
 
-INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `overview`) VALUES
-(1, '<p>\r\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\r\n', '<p>\r\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\r\n');
+INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `overview`, `link_ig`, `link_tw`, `link_fb`, `link_yt`) VALUES
+(1, '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', 'https://www.instagram.com/', 'https://twitter.com/', 'https://www.facebook.com/', '#');
 
 -- --------------------------------------------------------
 
@@ -417,7 +444,7 @@ ALTER TABLE `setting_tema`
 -- AUTO_INCREMENT for table `data_banner`
 --
 ALTER TABLE `data_banner`
-  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `data_gallery`
 --
@@ -427,7 +454,7 @@ ALTER TABLE `data_gallery`
 -- AUTO_INCREMENT for table `data_kategori`
 --
 ALTER TABLE `data_kategori`
-  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `data_kontak`
 --
