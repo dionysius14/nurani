@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		});
 	</script>
 	<div class="page-header">
-	  	<h1  class="well">TENTANG PT. NURANI JAYA</h1>
+	  	<h1>TENTANG PT. NURANI JAYA</h1>
 	</div>
 	<div class="content">
 		<?php echo $profile->profile_ket; ?>

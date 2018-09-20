@@ -24,11 +24,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 		<div class="establish">
 			<div class="side">
-				<h3>Establish</h3>
-				<span>since 1993</span>
+				<span>TERBAIK, TERCEPAT, TERPERCAYA</span>
 			</div>
 			<div class="side">
-				<p>We are trading, distribution, technical and engineering company for the General Industry <br/>(such as: Steel Mill, Paper Mill, Timber Factory) and Palm Oil Industry</p>
+				<p>CV. NURANI JAYA dan PT. NURANI JAYA ENERGI menjadi supplier barang pabrik kelapa sawit yang berkomitmen memberikan pelayanan terbaik, tercepat dan terpercaya</p>
 				<!-- <p><?php echo $profile->overview ?></p> -->
 			</div>
 		</div>
@@ -41,33 +40,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</h3>
 				<div class="item_introtext">
 					<h6>
-						<span>PROVIDING WITH LATEST TECHNOLOGY SOLUTIONS IN PALM OIL INDUSTRIESS</span>
+						<span>Kami selalu menyediakan produk-produk dengan teknologi terbaru dan terlengkap yang dapat membantu operasional Pabrik Kelapa Sawit sehingga mencapai tujuan dan target yang dikehendaki.</span>
 					</h6>
-					<p>We assure your Palm Oil Industries supplied with latest technology of palm oil mill machineries that can help Palm Oil Mill to achieve their goals and target.</p>
 				</div>
 			</div>
 			<div class="custom">
 				<img src="<?php echo base_url(); ?>assets/css/public/default/img/homepage/bran-tek.png" alt="bran tek">
 				<h3 class="item_title">
-					<strong>BRANDS<br></strong>
+					<strong>TRUST<br></strong>
 				</h3>
 				<div class="item_introtext">
 					<h6>
-						<span>WE SUPPLY WELL KNOWN AND RELIABLE BRAND IN PALM OIL INDUSTRIES</span>
+						<span>Dalam memberikan pelayanan, kami selalu menjaga kepercayaan customer, principal dan share holder untuk kelangsungan hubungan bisnis yang saling menguntungkan dan berkesinambungan.</span>
 					</h6>
-					<p>In Palm Oil Mill, we supplied well known and reliable brand for customer satisfaction.&nbsp; We supply you the Global Leader product in Palm Oil Industries, such as: CB-Modipalm (now PalmitEco), UNIVESSEL, SWECO, Muarban Lee (MBL), SHINKO, FOSS NIRS, SAWIPAC, SWF Krantechnik, etc</p>
 				</div>
 			</div>
 			<div class="custom">
 				<img src="<?php echo base_url(); ?>assets/css/public/default/img/homepage/icon-tek.png" alt="icon tek">
 				<h3 class="item_title">
-					<strong>SPAREPARTS &amp; AFTER SALES SERVICE</strong>
+					<strong>AFTER SALES SERVICE</strong>
 				</h3>
 				<div class="item_introtext">
 					<h6 >
-						<span>WE OFFER READY STOCK SPAREPARTS AND COMPETENT AFTER SALES SERVICE FOR CUSTOMER SATISFACTION</span>
+						<span>Kami memberikan garansi produk terbaik untuk menjaga kepercayaan dan kepuasan konsumen.</span>
 					</h6>
-					<p>With experience more than 20 years in this Palm Oil Industries, we really know the importance of Ready Stock Spareparts and well trained Technician (After Sales Service) to ensure your machine runs well and get the best result.</p>
 				</div>
 			</div>
 		</div>
@@ -77,11 +73,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="active">
 				<?php foreach($latest as $dtl){?>
 					<div class="gkImage">
-						<a href="#">
-							<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" alt="">
-						</a>
+						<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" alt="">
 						<h4>
-							<a href="<?php echo site_url("produk?id=".$dtl->produk_id.""); ?>"><?php echo $dtl->nama; ?></a>
+							<?php echo $dtl->nama; ?>
 						</h4>
 					</div>
 				<?php } ?>
@@ -89,10 +83,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 		<div class="social">
 			<ul>
-				<li><a href="<?php echo $profile->link_tw; ?>" ><i class="tw"></i></a></li>
-				<li><a href="<?php echo $profile->link_fb; ?>" ><i class="fb"></i></a></li>
-				<li><a href="<?php echo $profile->link_ig; ?>" ><i class="ig"></i></a></li>
-				<li><a href="<?php echo $profile->link_yt; ?>" ><i class="ytube"></i></a></li>
+				<li><a class="tw" href="<?php echo $profile->link_tw; ?>" ></a></li>
+				<li><a class="fb" href="<?php echo $profile->link_fb; ?>" ></a></li>
+				<li><a class="ig" href="<?php echo $profile->link_ig; ?>" ></a></li>
+				<li><a class="ytube" href="<?php echo $profile->link_yt; ?>" ></a></li>
 			</ul>
 		</div>
 	</div>

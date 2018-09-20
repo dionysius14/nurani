@@ -315,8 +315,8 @@ li .fa-backward:before{
 .homepage .homepage-container .establish p{
     color: white;
     font-size: 21px;
-    margin-top: 33px;
-    margin-bottom: 0px;
+    margin-bottom: 0px;    
+    text-align: justify;
 }
 .homepage .homepage-container .social{
     background-color: #c8c6cb;
@@ -331,7 +331,10 @@ li .fa-backward:before{
     float: left;
     list-style: none;
 }
-.homepage .homepage-container .social ul li i:before{
+.homepage .homepage-container .social ul li a{
+    display: block;
+}
+.homepage .homepage-container .social ul li a:before{
     width: 55px;
     height: 40px;
     content: '';
@@ -339,16 +342,16 @@ li .fa-backward:before{
     background: url(../default/img/social.png) no-repeat;
     background-size: 100%;
 }
-.homepage .homepage-container .social ul li i.tw:before{
+.homepage .homepage-container .social ul li a.tw:before{
     background-position: 0 -39px;
 }
-.homepage .homepage-container .social ul li i.fb:before{
+.homepage .homepage-container .social ul li a.fb:before{
     background-position: 0 0px;
 }
-.homepage .homepage-container .social ul li i.ig:before{
+.homepage .homepage-container .social ul li a.ig:before{
     background-position: 0 -75px;
 }
-.homepage .homepage-container .social ul li i.ytube:before{
+.homepage .homepage-container .social ul li a.ytube:before{
     background-position: 0 -114px;
 }
 
@@ -391,7 +394,7 @@ li .fa-backward:before{
 .homepage .homepage-container .ourproducts .active .gkImage h4 a{
     color: #282c2f;
 }
-.homepage .homepage-container .ourproducts .active .gkImage a img{
+.homepage .homepage-container .ourproducts .active .gkImage img{
     width: 100%;
 }
 
@@ -410,13 +413,16 @@ li .fa-backward:before{
 }
 .homepage .homepage-container .three-point .custom h3{
     font-family: 'Roboto';
-    color: #4b5560;
+    color: #3333cc;
 }
 .homepage .homepage-container .three-point .custom h3 strong{
     font-weight: 500;
 }
 .homepage .homepage-container .three-point .custom h6{
-    font-size: 13px;
+    font-size: 14px;
+    text-align: justify;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
 }
 .homepage .homepage-container .three-point .custom h6 span{
     color: #ff6600;
@@ -462,14 +468,22 @@ li .fa-backward:before{
 .ourproduct .ourproduct-container .container{
     max-width: 100%;
     padding: 0px;
-    width: 1280px;
+    width: 1280px;    
+    margin-bottom: 20px;
 }
-
+.ourproduct .ourproduct-container .container > div > h3{
+    padding: 19px;
+    padding-left: 0px;
+    border-bottom: 1px solid #eee;
+}
+.ourproduct .ourproduct-container .container .sidebar-category h3{
+    margin-right: 15px;
+}
 .ourproduct .ourproduct-container .container .sidebar-category{
     float: left;
-    width: 18%;
+    width: 20%;
+    padding-right: 10px;
 }
-
 .ourproduct .ourproduct-container .container .sidebar-category ul{
     padding: 0px;
 }
@@ -478,11 +492,11 @@ li .fa-backward:before{
 }
 .ourproduct .ourproduct-container .container .main{
     float: left;
-    width: 82%;
+    width: 80%;
     padding-left: 20px;    
-    -webkit-box-shadow: -18px 11px 47px -31px rgba(0,0,0,0.75);
-    -moz-box-shadow: -18px 11px 47px -31px rgba(0,0,0,0.75);
-    box-shadow: -18px 11px 47px -31px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -22px 6px 34px -30px rgba(0,0,0,0.75);
+    -moz-box-shadow: -22px 6px 34px -30px rgba(0,0,0,0.75);
+    box-shadow: -22px 6px 34px -30px rgba(0,0,0,0.75);
 }
 .ourproduct .ourproduct-container .container .main > ul.items{
     overflow: hidden;
@@ -950,6 +964,11 @@ li .fa-backward:before{
 }
 
 
+@media only screen and (max-width: 1290px) {
+    .ourproduct .ourproduct-container .container{
+        padding: 0px 10px;
+    }
+}
 @media only screen and (max-width: 1279px) {
     .menu .profile.container .content,
     .menu .news.container .content,

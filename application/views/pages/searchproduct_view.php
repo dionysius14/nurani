@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<nav class="ourproduct-container">
 	    <div class="container">
 	    	<div class="sidebar-category">
-	    		<h3  class="well">Category List</h3>
+	    		<h3>Category List</h3>
 	    		<ul>
 	                <?php foreach($kategori as $kt){?>
 	                  <li><a href="<?php echo site_url("ourproduct/setkategori?id=".$kt->kategori_id.""); ?>"><?php echo $kt->kategori_nama; ?></a></li>
@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    		</ul>
 	    	</div>
 	    	<div class="main">
-	    		<h3  class="well">Hasil pencarian dengan keyword "<?php echo $this->session->userdata('keyword'); ?>"</h3>
+	    		<h3>Hasil pencarian dengan keyword "<?php echo $this->session->userdata('keyword'); ?>"</h3>
 	    		<div class="toolbar">
 					<div class="pages"> 
 	        			<?php echo $this->pagination->create_links(); ?>
