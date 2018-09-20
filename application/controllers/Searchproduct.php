@@ -34,7 +34,7 @@ class Searchproduct extends CI_Controller {
         $config['base_url'] = site_url('searchproduct/index/');
         $rows = $this->db->query('SELECT * FROM data_produk WHERE nama like "%'.$keyword.'%" ORDER BY produk_id DESC')->result();
         $config['total_rows'] = count($rows);
-        $config['per_page'] = 3;
+        $config['per_page'] = 10;
         $config['use_page_numbers'] = FALSE;
         $config['num_links'] = 7;
         $config['next_link'] = '<i class="fa fa-fw fa-forward"></i>';

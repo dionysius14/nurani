@@ -36,13 +36,13 @@ class Ourproduct extends CI_Controller {
 		$kategori_id = $this->session->userdata('kategori_id');
 		if($kategori_id != ''){
 			$rows = $this->db->query('SELECT * FROM data_produk WHERE kategori_id = '.$kategori_id.' ORDER BY produk_id DESC')->result();
-			$common['nama_kategori'] = $this->home_model->get_kategori_by_id($kategori_id);			
+			$common['nama_kategori'] = $this->home_model->get_kategori_by_id($kategori_id)->kategori_nama;			
 		}else{
 			$rows = $this->db->query('SELECT * FROM data_produk ORDER BY produk_id DESC')->result();
 			$common['nama_kategori'] = "All Products";		
 		}
         $config['total_rows'] = count($rows);
-        $config['per_page'] = 8;
+        $config['per_page'] = 10;
         $config['use_page_numbers'] = FALSE;
         $config['num_links'] = 7;
         $config['next_link'] = '<i class="fa fa-fw fa-forward"></i>';
