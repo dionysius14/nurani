@@ -35,6 +35,7 @@ class News extends CI_Controller {
         $common['slider'] = $this->home_model->get_slider_home();
         $common['news_latest'] = $this->home_model->get_news_latest();
         $common['kategori'] = $this->home_model->get_kategori();
+        $common['branch'] = $this->home_model->get_branch();
 		
 		$config['base_url'] = site_url('news/index/');
         $rows = $this->db->query('SELECT * FROM data_news ORDER BY news_date DESC')->result();

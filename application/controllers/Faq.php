@@ -31,6 +31,7 @@ class Faq extends CI_Controller {
         $common['title'] = 'Faq';
         $common['profile'] = $this->home_model->get_profile();
         $common['slider'] = $this->home_model->get_slider_home();
+        $common['branch'] = $this->home_model->get_branch();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');

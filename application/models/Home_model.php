@@ -34,6 +34,20 @@ class Home_model extends CI_Model {
 	function get_slider_home() {
         $this->db->select();
         $this->db->from('data_banner');
+        $this->db->where('banner_page', 'Home');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    function get_branch() {
+        $this->db->select();
+        $this->db->from('data_branch');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    function get_slider_profile() {
+        $this->db->select();
+        $this->db->from('data_banner');
+        $this->db->where('banner_page', 'Profile');
         $query = $this->db->get();
         return $query->result();
     }

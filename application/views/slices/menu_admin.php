@@ -15,8 +15,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <ul class="nav side-menu">
                     <!--<li><a href="<?php echo site_url('admin/dashboard'); ?>"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>-->
                     <li><a href="<?php echo site_url('admin/profile'); ?>"><i class="fa fa-fw fa-user"></i> Profile</a></li>
-                    <li><a href="<?php echo site_url('admin/kategori'); ?>"><i class="fa fa-fw fa-building"></i> Kategori</a></li>
-                    <li><a href="<?php echo site_url('admin/produk'); ?>"><i class="fa fa-fw fa-building"></i> Produk</a></li>
+                    <li><a href="<?php echo site_url('admin/branch'); ?>"><i class="fa fa-fw fa-building"></i> Branch</a></li>
+                    <li><a href="<?php echo site_url('admin/kategori'); ?>"><i class="fa fa-fw fa-tag"></i> Kategori</a></li>
+                    <li><a href="<?php echo site_url('admin/produk'); ?>"><i class="fa fa-fw fa-tag"></i> Produk</a></li>
                     <li><a href="<?php echo site_url('admin/kontak'); ?>"><i class="fa fa-fw fa-envelope"></i> Data Kontak</a></li>
                     <!-- <li><a href="<?php echo site_url('admin/chat'); ?>"><i class="fa fa-fw fa-users"></i> Online Chat</a></li> -->
                     <li><a href="<?php echo site_url('admin/slider'); ?>"><i class="fa fa-fw fa-users"></i> Slider</a></li>

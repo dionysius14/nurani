@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2018 at 05:24 AM
+-- Generation Time: Sep 23, 2018 at 06:02 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -138,15 +138,46 @@ INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activ
 CREATE TABLE `data_banner` (
   `banner_id` int(11) NOT NULL,
   `banner_foto` text,
-  `banner_link` varchar(255) NOT NULL
+  `banner_link` varchar(255) NOT NULL,
+  `banner_page` enum('Home','Profile') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `data_banner`
 --
 
-INSERT INTO `data_banner` (`banner_id`, `banner_foto`, `banner_link`) VALUES
-(1, '81620-milan-construction-banner-8.jpg', '#');
+INSERT INTO `data_banner` (`banner_id`, `banner_foto`, `banner_link`, `banner_page`) VALUES
+(7, '1d0e1-0d82d-goaceh_vhe5s_54052.jpg', '#', 'Home'),
+(8, '0cf3b-4d37d-visimisi1.jpg', '', 'Home'),
+(9, '99599-29654-ourculture.jpg', '', 'Profile'),
+(10, '686f4-45318-warehouse2.jpg', '', 'Home'),
+(11, '6b252-a5269-aboutus2.jpg', '', 'Profile'),
+(12, '3ac93-af054-dahlan-iskan-pabrik-kelapa-sawit-emisi1.jpg', '', 'Home'),
+(13, '5d7d4-c3a6d-perusahaan-kelapa-sawit2.jpg', '', 'Home');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_branch`
+--
+
+CREATE TABLE `data_branch` (
+  `branch_id` int(11) NOT NULL,
+  `branch_nama` varchar(255) NOT NULL,
+  `branch_alamat` text NOT NULL,
+  `latitute` varchar(100) NOT NULL,
+  `longitude` varchar(100) NOT NULL,
+  `link_wa` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data_branch`
+--
+
+INSERT INTO `data_branch` (`branch_id`, `branch_nama`, `branch_alamat`, `latitute`, `longitude`, `link_wa`) VALUES
+(2, 'TEMBILAHAN', '<div>\n	JL. Tanjung Kilang Lorong Pak De NO.2 Tanjung Harapan, Tembilahan</div>\n<div>\n	BP DEDY 0852 6405 7655</div>\n', '', '', 'https://wa.me/6285264057655'),
+(3, 'KALTIM', '<div>\n	JL. Jakarta Blok Z NO.11 Komplek Korpri Samarinda &ndash; Kaltim</div>\n<div>\n	BP AGUS LEO 0812 5348 3689</div>\n', '', '', 'https://wa.me/6281253483689'),
+(4, 'PALU', '<div>\n	Perum Mandiri Indah Blok M N0.4 Depan RSUD Madani MAamboro Palu ,Sulawesi Tengah</div>\n<div>\n	BP TIO 0812 2526 395</div>\n', '', '', 'https://wa.me/628122526395');
 
 -- --------------------------------------------------------
 
@@ -244,7 +275,9 @@ CREATE TABLE `data_kontak` (
 --
 
 INSERT INTO `data_kontak` (`kontak_id`, `kontak_nama`, `kontak_email`, `kontak_phone`, `kontak_keterangan`) VALUES
-(1, 'test', 'dion12345@gmail.com', '082135288638', 'test message');
+(1, 'test', 'dion12345@gmail.com', '082135288638', 'test message'),
+(2, 'tes', 'damaragatedionysius@gmail.com', '082135288638', 'adas'),
+(3, 'tes', 'damaragatedionysius@gmail.com', '082135288638', 'adas');
 
 -- --------------------------------------------------------
 
@@ -298,7 +331,10 @@ INSERT INTO `data_produk` (`produk_id`, `kategori_id`, `logo`, `banner`, `nama`,
 (5, 1, 'd97be-images-3-.jpg', '22f6b-images-3-.jpg', 'produk 4', ''),
 (6, 1, 'e0a8d-images-4-.jpg', '147c1-images-4-.jpg', 'produk 5', ''),
 (7, 1, '3ce94-images.jpg', '217ca-images.jpg', 'produk 6', ''),
-(8, 3, '0917f-kpx7803esd-600x600.jpg', '10742-kpx7803esd-600x600.jpg', 'produk 7', '');
+(8, 3, '0917f-kpx7803esd-600x600.jpg', '10742-kpx7803esd-600x600.jpg', 'produk 7', ''),
+(9, 2, '0aaeb-tes.png', '18c09-tes.png', 'TES', '<p>\r\n	TES</p>\r\n'),
+(10, 2, 'be43c-tes2.jpg', 'c5957-tes2.jpg', 'TES2', '<p>\r\n	TES2</p>\r\n'),
+(11, 12, '0d056-tes2.jpg', 'a059b-tes2.jpg', 'Coba', '<p>\r\n	Coba</p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -313,15 +349,17 @@ CREATE TABLE `data_profile` (
   `link_ig` varchar(255) NOT NULL,
   `link_tw` varchar(255) NOT NULL,
   `link_fb` varchar(255) NOT NULL,
-  `link_yt` varchar(255) NOT NULL
+  `link_yt` varchar(255) NOT NULL,
+  `link_wa` varchar(255) NOT NULL,
+  `headoffice` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `data_profile`
 --
 
-INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `overview`, `link_ig`, `link_tw`, `link_fb`, `link_yt`) VALUES
-(1, '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', 'https://www.instagram.com/', 'https://twitter.com/', 'https://www.facebook.com/', '#');
+INSERT INTO `data_profile` (`profile_id`, `profile_ket`, `overview`, `link_ig`, `link_tw`, `link_fb`, `link_yt`, `link_wa`, `headoffice`) VALUES
+(1, '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', '<p>\n	lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit amet&nbsp;lorem ipsum dolor sit ametlorem ipsum dolor sit amet</p>\n', 'https://www.instagram.com/', 'https://twitter.com/', 'https://www.facebook.com/', '#', 'https://wa.me/<phone number int format without \'+\'>', '<div>\n	JL. Bukit Barisan NO 20, Tenayan Raya, Tangkerang Timur, Pekanbaru Riau 28131 (Depan SMU Negeri 10 Pekanbaru)&nbsp;</div>\n<div>\n	TELP/ FAX : 0851-0063-3893 / 0761- 8405-521&nbsp;</div>\n<div>\n	&nbsp;</div>\n<div>\n	Email : nurani_je@yahoo.com</div>\n');
 
 -- --------------------------------------------------------
 
@@ -389,6 +427,12 @@ ALTER TABLE `data_banner`
   ADD PRIMARY KEY (`banner_id`);
 
 --
+-- Indexes for table `data_branch`
+--
+ALTER TABLE `data_branch`
+  ADD PRIMARY KEY (`branch_id`);
+
+--
 -- Indexes for table `data_gallery`
 --
 ALTER TABLE `data_gallery`
@@ -444,7 +488,12 @@ ALTER TABLE `setting_tema`
 -- AUTO_INCREMENT for table `data_banner`
 --
 ALTER TABLE `data_banner`
-  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT for table `data_branch`
+--
+ALTER TABLE `data_branch`
+  MODIFY `branch_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `data_gallery`
 --
@@ -459,7 +508,7 @@ ALTER TABLE `data_kategori`
 -- AUTO_INCREMENT for table `data_kontak`
 --
 ALTER TABLE `data_kontak`
-  MODIFY `kontak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `kontak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `data_news`
 --
@@ -469,7 +518,7 @@ ALTER TABLE `data_news`
 -- AUTO_INCREMENT for table `data_produk`
 --
 ALTER TABLE `data_produk`
-  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `data_profile`
 --

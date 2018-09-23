@@ -29,6 +29,8 @@ class Searchproduct extends CI_Controller {
         $this->session->set_userdata("last_url", "home");
         $common['title'] = 'Produk';
         $common['kategori'] = $this->home_model->get_kategori();
+        $common['branch'] = $this->home_model->get_branch();
+        $common['profile'] = $this->home_model->get_profile();
      
         $keyword = $this->session->userdata('keyword');
         $config['base_url'] = site_url('searchproduct/index/');

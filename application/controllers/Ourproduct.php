@@ -30,6 +30,8 @@ class Ourproduct extends CI_Controller {
         $this->session->set_userdata("last_url", "home");
         $common['title'] = 'Produk';
         $common['kategori'] = $this->home_model->get_kategori();
+        $common['branch'] = $this->home_model->get_branch();
+        $common['profile'] = $this->home_model->get_profile();
         // $id = $this->input->get('id');
         
         $config['base_url'] = site_url('ourproduct/index/');

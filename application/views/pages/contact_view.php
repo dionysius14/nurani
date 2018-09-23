@@ -3,37 +3,69 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="contact-us">
-    <div class="container">
-        <div class="form">
-            <div class="page-header">
-                <h1>Contact Form</h1>
+        <div class="container">
+            <div class="sidebar">
+                <div class="location-sidebar"><span>Contact Us</span></div>
+                <div class="form-sidebar"><span>Contact Form</span></div>
             </div>
-            <p>Please enter your contact details and a short message below and I will try to answer your query as soon as possible.</p>
-            <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
-            <ul>
-                <li>
-                    <label>Name</label>
-                    <input type="text" id="kontak_nama" name="kontak_nama" required>
-                </li>
-                <li>
-                    <label>Email</label>
-                    <input type="email" id="kontak_email" name="kontak_email" required>
-                </li>
-                <li>
-                    <label>Phone</label>
-                    <input type="text" id="kontak_phone" name="kontak_phone" required>
-                </li>
-                <li>
-                    <label>Message</label>
-                    <textarea rows="4" cols="50" id="kontak_keterangan" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
-                </li>
-                <div class="g-recaptcha" data-sitekey="6LcNYloUAAAAALbqUieM3LzBsYE56gpWPxEUeWdQ"></div>
-            </ul>
-            <input type="submit" id="button" name="kirim" value="Send"  class="btn btn-success" />
-            <?php echo form_close(); ?> 
-        </div>
-        <div id="map"></div>
-	</div>
+            <div class="content location">
+                <div>
+                    <div class="page-header">
+                        <h1>Contact Us</h1>
+                    </div>
+                    <div class="headoffice">
+                        <span>Head Office:</span>
+                        <p><?php echo $profile->headoffice ?> </p>
+                    </div>
+                    <div class="cities">
+                    <ul>
+                        <?php foreach($branch as $bc){ ?>
+                        <li>
+                            <p>
+                                <strong><?php echo $bc->branch_nama; ?></strong> 
+                                <div id="alamat"><?php echo $bc->branch_alamat; ?></div>
+                                <div id="telepon"><a target="blank" href="<?php echo "http://maps.google.com?q=".$bc->latitute.",".$bc->longitude.""; ?>" ><img src="<?php echo base_url(); ?>assets/css/public/default/img/maps.png ?>" height="42" width="42" alt="" ></a><a target="blank" href="<?php echo $bc->link_wa; ?>" ><img src="<?php echo base_url(); ?>assets/css/public/default/img/wa.png ?>" height="42" width="130" alt="" ></a></div>
+                            </p>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                        <td style="padding: 20px 0px; text-align: center;">
+
+                        </td>
+                    </div>
+                </div>
+            </div>
+            <div class="content form">
+                <div class="page-header">
+                    <h1>Contact Form</h1>
+                </div>
+                <p>Please enter your contact details and a short message below and I will try to answer your query as soon as possible.</p>
+                <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
+                <ul>
+                    <li>
+                        <label>Name</label>
+                        <input type="text" id="kontak_nama" name="kontak_nama" required>
+                    </li>
+                    <li>
+                        <label>Email</label>
+                        <input type="email" id="kontak_email" name="kontak_email" required>
+                    </li>
+                    <li>
+                        <label>Phone</label>
+                        <input type="text" id="kontak_phone" name="kontak_phone" required>
+                    </li>
+                    <li>
+                        <label>Message</label>
+                        <textarea rows="4" cols="50" id="kontak_keterangan" name="kontak_keterangan" required style="vertical-align: top;"></textarea>
+                    </li>
+                    <div class="g-recaptcha" data-sitekey="6LcNYloUAAAAALbqUieM3LzBsYE56gpWPxEUeWdQ"></div>
+                </ul>
+                <input type="submit" id="button" name="kirim" value="Send"  class="btn btn-success" />
+                <?php echo form_close(); ?> 
+                <div id="map"></div>
+            </div>
+        </div> 
+    </div>
 </div>
 <script type="text/javascript">
     function initMap() {
@@ -72,6 +104,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         google.maps.event.addDomListener(window, 'load', initMap);
     }
 
+</script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery(".location-sidebar").click(function() {
+            jQuery(".content.location").show();
+            jQuery(".content.form").hide();
+        });
+        jQuery(".form-sidebar").click(function() {
+            jQuery(".content.form").show();
+            jQuery(".content.location").hide();
+        });
+    });
 </script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7sMs4pf-OWid7m8jPSrlcAMDzd2kOc6s&callback=initMap"

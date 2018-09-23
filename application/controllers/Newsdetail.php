@@ -35,6 +35,7 @@ class Newsdetail extends CI_Controller {
         $common['slider'] = $this->home_model->get_slider_home();
         $common['newsdetail'] = $this->home_model->get_newsbyid($id);
         $common['kategori'] = $this->home_model->get_kategori();
+        $common['branch'] = $this->home_model->get_branch();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');

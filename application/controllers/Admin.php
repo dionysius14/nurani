@@ -66,6 +66,8 @@ class Admin extends CI_Controller {
         $gc->display_as('link_tw', 'Link Twitter');
         $gc->display_as('link_yt', 'Link Youtube');
         $gc->display_as('link_ig', 'Link Instagram');
+        $gc->display_as('link_wa', 'Whatsapp');
+        $gc->display_as('headoffice', 'Alamat Head Office');
         $gc->required_fields('profile_ket','overview');
         $gc->unset_print();
         $gc->unset_add();
@@ -76,6 +78,26 @@ class Admin extends CI_Controller {
         $output->notes = '<p><i></i></p>';
         $this->paint_slice($output);
     }
+    public function branch() {
+        $this->mylib->checkloginadmin();
+        $gc = new grocery_CRUD();
+        $gc->set_subject('Cabang');
+        $gc->set_table('data_branch');
+        $gc->display_as('branch_nama', 'Branch');
+        $gc->display_as('branch_alamat', 'Alamat');
+        $gc->display_as('latitude', 'Latitude');
+        $gc->display_as('longitude', 'Longitude');
+        $gc->display_as('link_wa', 'Link Whatsapp');
+        $gc->required_fields('branch_nama','branch_alamat');
+        $gc->unset_print();
+        // $gc->unset_add();
+        // $gc->unset_delete();
+        $output = $gc->render();
+        $output->title = 'Cabang| Web Admin';
+        $output->subtitle = 'Cabang';
+        $output->notes = '<p><i></i></p>';
+        $this->paint_slice($output);
+    }
 	public function slider() {
         $this->mylib->checkloginadmin();
         $gc = new grocery_CRUD();
@@ -83,7 +105,9 @@ class Admin extends CI_Controller {
         $gc->set_table('data_banner');
         $gc->display_as('banner_foto', 'Foto');
         $gc->display_as('banner_link', 'Link');
+        $gc->display_as('banner_page', 'Page');
         $gc->required_fields('banner_foto');
+        $gc->required_fields('banner_page');
 		$gc->set_field_upload('banner_foto', 'assets/uploads/slider');
         $gc->unset_print();
         // $gc->unset_add();

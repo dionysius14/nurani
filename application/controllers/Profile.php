@@ -31,8 +31,9 @@ class Profile extends CI_Controller {
         $this->session->set_userdata("last_url", "home");
         $common['title'] = 'Profile';
         $common['profile'] = $this->home_model->get_profile();
-        $common['slider'] = $this->home_model->get_slider_home();
+        $common['slider'] = $this->home_model->get_slider_profile();
         $common['kategori'] = $this->home_model->get_kategori();
+        $common['branch'] = $this->home_model->get_branch();
         $st = new Stencil();
         $st->layout('menu_layout');
         $st->slice('head');
