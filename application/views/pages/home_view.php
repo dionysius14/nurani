@@ -83,7 +83,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<ul>
 				<li><a class="fb" href="<?php echo $profile->link_fb; ?>" ></a></li>
 				<li><a class="ig" href="<?php echo $profile->link_ig; ?>" ></a></li>
-				<li><a href="<?php echo $profile->link_wa; ?>" ></a>WA</li>
+				<li><a class="whatsapp" href="<?php echo $profile->link_wa; ?>" ></a></li>
 			</ul>
 		</div>
 	</div>

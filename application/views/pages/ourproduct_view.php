@@ -8,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    	<h3>Products</h3>
 	    	<div class="sidebar-category">
 	    		<h3>Category List</h3>
+	    		<div class="mobile-action"></div>
 	    		<ul>
 	                <?php foreach($kategori as $kt){?>
 	                  <li><a href="<?php echo site_url("ourproduct/setkategori?id=".$kt->kategori_id.""); ?>"><?php echo $kt->kategori_nama; ?></a></li>
@@ -43,16 +44,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    </div>
 	</div>
 </div>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
 	jQuery(document).ready(function(){
-		var sb = $( ".sidebar-category" ).outerHeight();
-		var m = $( ".main" ).outerHeight();
-		console.log(sb);
-		console.log(m);
-		if (sb > m) {
-			$( ".sidebar-category" ).addClass("tall");
-		}else{
-			$( ".main" ).addClass("tall");
-		}
+		 if ($(window).width() < 481){
+		 	$( ".sidebar-category .mobile-action" ).click(function(){
+		 		$(this).toggleClass('active');
+            	$('.sidebar-category > ul').toggleClass("active");
+		 	});
+		 }
 	});
-</script> -->
+</script>

@@ -4,15 +4,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <div class="contact-us">
         <div class="container">
+            <div class="page-header">
+                <h1>Contact Us</h1>
+            </div>
             <div class="sidebar">
                 <div class="location-sidebar"><span>Contact Us</span></div>
                 <div class="form-sidebar"><span>Contact Form</span></div>
             </div>
             <div class="content location">
                 <div>
-                    <div class="page-header">
-                        <h1>Contact Us</h1>
-                    </div>
                     <div class="headoffice">
                         <span>Head Office:</span>
                         <p><?php echo $profile->headoffice ?> </p>
@@ -24,20 +24,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <p>
                                 <strong><?php echo $bc->branch_nama; ?></strong> 
                                 <div id="alamat"><?php echo $bc->branch_alamat; ?></div>
-                                <div id="telepon"><a target="blank" href="<?php echo "http://maps.google.com?q=".$bc->latitute.",".$bc->longitude.""; ?>" ><img src="<?php echo base_url(); ?>assets/css/public/default/img/maps.png ?>" height="42" width="42" alt="" ></a><a target="blank" href="<?php echo $bc->link_wa; ?>" ><img src="<?php echo base_url(); ?>assets/css/public/default/img/wa.png ?>" height="42" width="130" alt="" ></a></div>
+                                <div id="map-wa">
+                                    <a target="blank" href="<?php echo "http://maps.google.com?q=".$bc->latitute.",".$bc->longitude.""; ?>" >
+                                        <img src="<?php echo base_url(); ?>assets/css/public/default/img/map.png ?>">
+                                    </a>
+                                    <a target="blank" href="<?php echo $bc->link_wa; ?>" >
+                                        <img src="<?php echo base_url(); ?>assets/css/public/default/img/whatsapp.png ?>">
+
+                                    </a>
+                                </div>
                             </p>
                         </li>
                         <?php } ?>
                     </ul>
-                        <td style="padding: 20px 0px; text-align: center;">
-
-                        </td>
                     </div>
                 </div>
             </div>
             <div class="content form">
                 <div class="page-header">
-                    <h1>Contact Form</h1>
+                    <h3>Contact Form</h3>
                 </div>
                 <p>Please enter your contact details and a short message below and I will try to answer your query as soon as possible.</p>
                 <?php echo form_open('contact/insertcontact', 'id="form_add"'); ?> 
