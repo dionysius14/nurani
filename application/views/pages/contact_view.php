@@ -26,10 +26,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="alamat"><?php echo $bc->branch_alamat; ?></div>
                                 <div id="map-wa">
                                     <a target="blank" href="<?php echo "http://maps.google.com?q=".$bc->latitute.",".$bc->longitude.""; ?>" >
-                                        <img src="<?php echo base_url(); ?>assets/css/public/default/img/map.png ?>">
+                                        <img src="<?php echo base_url(); ?>assets/css/public/default/img/map.png ">
                                     </a>
                                     <a target="blank" href="<?php echo $bc->link_wa; ?>" >
-                                        <img src="<?php echo base_url(); ?>assets/css/public/default/img/whatsapp.png ?>">
+                                        <img src="<?php echo base_url(); ?>assets/css/public/default/img/whatsapp.png ">
 
                                     </a>
                                 </div>

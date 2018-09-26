@@ -48,7 +48,7 @@ class Contact extends CI_Controller {
 				$this->home_model->insertkontak($data);
 				$this->session->set_userdata('kontak_success', 1);
                 // $this->EmailSend($data);
-				redirect('home');
+				
 
     }
     public function EmailSend($data)
@@ -69,7 +69,7 @@ class Contact extends CI_Controller {
          
         $this->email->from('contact@nuranijaya.co.id', 'nuranijaya.co.id');
         $email = $data['kontak_email'];
-        $name = $data['kontak_name'];
+        $name = $data['kontak_nama'];
         $telp = $data['kontak_phone'];
         $subject = "Contact Us";
         $pesan = $data['kontak_keterangan'];
@@ -83,9 +83,9 @@ class Contact extends CI_Controller {
          
         if($this->email->send())
         {
-/*            $this->email->from('contact@nuranijaya.co.id', 'Nurani Jaya Energi | nuranijaya.co.id');
+            $this->email->from('contact@nuranijaya.co.id', 'Nurani Jaya Energi | nuranijaya.co.id');
             $email = $data['kontak_email'];
-            $name = $data['kontak_name'];
+            $name = $data['kontak_nama'];
             $telp = $data['kontak_phone'];
             $pesan = $data['kontak_keterangan'];
             // $list = array($email);
@@ -109,7 +109,7 @@ class Contact extends CI_Controller {
               echo "<script>
                     //alert('Email sent!');
                     </script>";            
-                $this->load->view('front/pages/contact');
+                redirect('home');
             }
             else
             {
@@ -117,11 +117,7 @@ class Contact extends CI_Controller {
                     alert('Email failed to send!');
                     </script>"; 
                     show_error($this->email->print_debugger());
-            }*/
-            echo "<script>
-                    //alert('Email sent!');
-                    </script>";            
-                $this->load->view('pages/contact_view');
+            }*
         }
         else
         {
