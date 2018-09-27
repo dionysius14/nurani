@@ -2,7 +2,12 @@
     <div class="upper">
       <div class="container">
         <div class="text-above"><b>CV. NURANI JAYA | PT. NURANI JAYA ENERGI</b></div>
-        <div id="google_translate_element"></div>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <div class="mobile-menu-container">
+        <i class="fa fa-menu"></i>
+        <span>Menu</span>
       </div>
     </div>
     <div class="logo-mobile">
@@ -10,27 +15,24 @@
           <img src="<?php echo base_url(); ?>\assets\css\public\default\img\logonurani.png">
       </a>
     </div>
-    <div class="mobile-menu">
-      <i class="fa fa-menu"></i>
-      <span>Menu</span>
-    </div>
     <div class="header-menu" id="navbar">
-        <div class="container">
-          <div class="logo">
-            <a href="<?php echo base_url(); ?>">
-                <img src="<?php echo base_url(); ?>\assets\css\public\default\img\logonurani.png">
-            </a>
-          </div>
-          <ul class="nav navbar-nav navbar-center" align="center">
-             <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
-             <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a></li>
-             <li class="list-menu category">
-                <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Our Products</a>
-             </li>
-             <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">Article</a></li>
-             <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a></li>
-         </ul>
+      <div class="container">
+        <div class="logo">
+          <a href="<?php echo base_url(); ?>">
+              <img src="<?php echo base_url(); ?>\assets\css\public\default\img\logonurani.png">
+          </a>
         </div>
+        <div id="google_translate_element"></div>
+        <ul class="nav navbar-nav navbar-center" align="center">
+           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url(); ?>">Home</a></li>
+           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("profile"); ?>">Our Profile</a></li>
+           <li class="list-menu category">
+              <a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("ourproduct"); ?>">Our Products</a>
+           </li>
+           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("news"); ?>">Article</a></li>
+           <li class="list-menu"><a data-toggle="" data-target=".navbar-collapse" class="page-scroll handlee" href="<?php echo site_url("contact"); ?>">Contact Us</a></li>
+        </ul>
+      </div>
    </div>
 </div>
 
@@ -72,6 +74,7 @@
         $('.list-menu.category').click(function () {
             $('.list-menu.category .sub-category').toggleClass("active");
         });
+        $('.header .header-menu #google_translate_element').insertBefore( "body > .header .mobile-menu" );
       }
   });
 

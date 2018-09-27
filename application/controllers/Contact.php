@@ -117,7 +117,7 @@ class Contact extends CI_Controller {
                     alert('Email failed to send!');
                     </script>"; 
                     show_error($this->email->print_debugger());
-            }*
+            }
         }
         else
         {

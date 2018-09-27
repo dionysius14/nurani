@@ -20,7 +20,9 @@ body{
 body .container{
     width: 100%;
     max-width: 1280px;
-    margin: 0 auto;
+    margin: 0 auto;    
+    padding: 0px;    
+    margin-bottom: 5px;
 }
 
 .pagination li{
@@ -98,12 +100,6 @@ li .fa-backward:before{
     color: white;
     padding: 10px 0px;
 }
-.header .upper #google_translate_element{
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
 .header .logo,
 .header .header-menu{
 	float: left;
@@ -111,8 +107,9 @@ li .fa-backward:before{
 }
 .header .logo,
 .header .logo img{
-    width: 73px;
-    margin-top: 0px;
+    margin-top: 0px;   
+    height: 75px;
+    width: 103px;
 }
 .header .header-menu{
     width: 100%;
@@ -130,33 +127,46 @@ li .fa-backward:before{
     padding: 3px 0px;
 }
 .header .header-menu .navbar-nav{
-    width: calc(100% - 73px);
+    width: 521px;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 23px;
 }
 .header .header-menu .navbar-nav .handlee{
     font-family: 'Open Sans', sans-serif;    
     color: white;
     text-transform: none;
     font-size: 14px;
-    border-bottom: 3px solid transparent;    
+    border-bottom: 1px solid transparent;    
     margin-bottom: -3px;   
+    font-weight: 700;
+}
+.header .header-menu #google_translate_element{
+    float: right;   
+    margin-top: 23px;
 }
 .header .header-menu .navbar-nav > li{
-	padding: 0px;
-	line-height: 54px;
-	width: calc(100%/5);    
+    padding: 0px;
+    line-height: 54px;
+    width: auto;    
     text-align: center; 
-    padding: 0px 5px;
+    margin: 0px 13px;
+}
+.header .header-menu .navbar-nav > li:first-child{
+    margin-left: 0px;
+}
+.header .header-menu .navbar-nav > li:last-child{
+    margin-right: 0px;
 }
 .header .header-menu .navbar-nav li.list-menu:hover > a,
 .header .header-menu .navbar-nav li.list-menu.active > a,
 .header .header-menu .navbar-nav li.list-menu:hover > span,
 .header .header-menu .navbar-nav li.list-menu.active > span{
-    border-bottom: 3px solid rgb(51, 51, 204);
+    border-bottom: 1px solid rgb(51, 51, 204);
     color: rgb(51, 51, 204);
     background: white;
-    width: 50%;
     display: block;
-    margin: 0 auto;
 }
 
 .header .header-menu .navbar-nav li.list-menu:hover .handlee{
@@ -206,9 +216,9 @@ li .fa-backward:before{
 .header .header-menu .navbar-nav li.list-menu > a,
 .header .header-menu .navbar-nav li.list-menu > span{
 	padding: 0px;
-	line-height: 55px;    
+    line-height: 24px; 
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 15px;
     color: rgb(51, 51, 204);
 }
 .footer-container{
@@ -875,6 +885,7 @@ li .fa-backward:before{
 .menu .contact-us .container .content.location .cities ul li #map-wa a img{
     height: 42px;
     width: 42px;
+    opacity: 0.5;
 }
 .menu .contact-us .container .content.location .headoffice span{
     font-size: 20px;
@@ -1076,20 +1087,21 @@ li .fa-backward:before{
 
 @media only screen and (max-width: 1023px) {
     .header{
-        padding-bottom: 0px;
+        padding-bottom: 0px;    
+        padding: 0px;
     }
-    .header .logo a img {
-        width: 100%;
+    .header > div{
+        padding: 0px 10px 0px 10px;
     }
-    .header .logo, .header .header-menu {
+    .header > div.upper{
+        padding: 0px;
+    }
+    .header .header-menu .navbar-nav{
+        width: 457px;
+    }
+    .header .header-menu {
         float: none;
         width: 100%;
-    }
-    .header .logo{
-        text-align: center;    
-        width: 50%;
-        max-width: 100px;
-        margin: 0 auto;
     }
     .homepage .homepage-container .container{
         padding: 0px 10px 0 10px;
@@ -1116,6 +1128,10 @@ li .fa-backward:before{
     }
 }
 @media only screen and (max-width: 768px) {
+    .header .header-menu .navbar-nav{
+        margin-right: 0px;
+        margin-top: 10px;
+    }
     .homepage .homepage-container .container .items .level1{
         width: calc(100%/2);
     }
@@ -1255,18 +1271,35 @@ li .fa-backward:before{
     }
 }
 @media only screen and (max-width: 480px) {
+    .header .header-menu .navbar-nav li.list-menu:hover > a,
+    .header .header-menu .navbar-nav li.list-menu.active > a,
+    .header .header-menu .navbar-nav li.list-menu:hover > span,
+    .header .header-menu .navbar-nav li.list-menu.active > span{
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .header .header-menu .navbar-nav li.list-menu > a, 
+    .header .header-menu .navbar-nav li.list-menu > span{
+        width: fit-content;
+        margin: 0 auto;
+    }
     .header{
         padding: 0px;
+        overflow: hidden;    
+        border-bottom: 1px solid #3333cc26;
+        border-radius: 8px;
     }
     .header .logo{
         display: none;
     }
     .header > .logo-mobile{
         display: block;   
-        width: 50%;
-        max-width: 100px;
-        margin: 0 auto;
-        padding: 5px 0px;
+        width: 115px;
+        max-width: 115px;
+        position: absolute;
+        top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .header > .logo-mobile img{
         width: 100%;
@@ -1274,41 +1307,42 @@ li .fa-backward:before{
     .header .logo a img {
         width: 100%;
     }
-    .header .upper #google_translate_element{
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-top: 10px;
-        transform: unset;
+    .header > #google_translate_element{
         text-align: center;
+        margin-top: 92px;
     }
     .mobile-menu {
-        background:  rgb(51, 51, 204);
         margin-bottom: 10px;
         font-family: 'Open Sans', sans-serif;
-        color: white;    
+        color: black;
         position: relative;
         display: block;
+        width: 100%;
+        float: left;
+        height: 20px;
+        margin-top: 10px;
     }
     .mobile-menu.active{
         margin-bottom: 0px;
     }
-    .mobile-menu span{
+    .mobile-menu .mobile-menu-container{
+        width: 100%;
+        position: relative;    
+        text-align: center;
+    }
+/*    .mobile-menu span{
         position: absolute;
-        top: 45%;
+        top: 45%;    
+        font-weight: 700;
         transform: translateY(-50%);
-        left: 44px;
+        left: 44px;    
+        transform: translate(-50%, -50%);
+        left: 50%;
         text-transform: uppercase;
-    }
-    .mobile-menu .fa-menu{
-        padding: 10px;    
-        color: white;
-    }
-    .mobile-menu .fa-menu:before{
-        content: "\f039";
-        display: block;
-        color: white;
-        font-size: 23px;
+    }*/    
+    .mobile-menu span{
+        font-weight: 700;
+        text-transform: uppercase;
     }
     .header .header-menu{
         margin-top: 0px;
@@ -1334,13 +1368,17 @@ li .fa-backward:before{
         width: 100%;
     }
     .footer .row .branch .branch-item h3{
-        margin-bottom: 10px;
+        margin-bottom: 3px;
+        font-size: 18px;
+    }
+    .footer .row .branch .branch-item br{
+        display: none;
     }
     .header .header-menu .navbar-nav li.list-menu{
         float: none;
     }
     .header .header-menu .navbar-nav li.list-menu.category{
-        height: 55px;    
+        height: 27px; 
     }
     .header .header-menu .navbar-nav li.list-menu.category:hover .sub-category{
         display: none;
@@ -1447,20 +1485,40 @@ li .fa-backward:before{
         box-shadow: unset;
     }
     .ourproduct .ourproduct-container .container .main > ul.items .item{
-        width: 75%;
+        width: 50%;
         margin: 0 auto;
-        float: none;
+        float: left;
+    }
+    .ourproduct .ourproduct-container .container .main > ul.items .item:nth-child(5n+1){
+        clear: none;
+    }
+    .ourproduct .ourproduct-container .container .main > ul.items .item:nth-child(2n+1){
+        clear: left;
     }
 
+    .menu .page-header{
+        margin-top: 0px;
+    }
+    .menu .page-header h1{
+        font-size: 22px;
+    }
+    .menu .contact-us .container{
+        margin-top: 0px;
+    }
     .menu .contact-us .container .content.location .cities ul li{
-        width: 100%;
+        width: 100%;    
+        margin-bottom: 10px;
+        padding: 0px;
+    }
+    .menu .contact-us .container .content.location .cities ul li #map-wa{
+        text-align: left;
     }
     .menu .contact-us .container .content.location .cities ul li img{
         width: 100%;
         height: auto;
     }
     .menu .contact-us .container .content.location .cities ul li p{
-        text-align: center;
+        text-align: left;
     }
     .menu .contact-us .container .sidebar,
     .menu .contact-us .container .content{
@@ -1488,4 +1546,5 @@ li .fa-backward:before{
     .product-view .tab #tab-1 ul li{
         width: 100%;
     }
+
 }
