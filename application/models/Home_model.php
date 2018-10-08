@@ -68,6 +68,7 @@ class Home_model extends CI_Model {
 	function get_produklatest() {
         $this->db->select();
         $this->db->from('data_produk');
+        $this->db->order_by("sort", "DESC");
 		$this->db->limit(6);
         $query = $this->db->get();
         return $query->result();

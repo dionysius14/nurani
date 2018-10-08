@@ -20,6 +20,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<?php echo form_open('ourproduct/search', 'id="form_add"'); ?>
 						<input type="text" id="filter" name="filter" class="form-control" placeholder="Cari Produk">
 						<?php echo form_close(); ?> 
+						<br/>
+						<?php echo form_open('ourproduct/clearsearch', 'id="form_add"'); ?>
+						<button type="submit">show all</button>
+						<?php echo form_close(); ?> 
 					</div>
 					<div class="pages"> 
 	        			<?php echo $this->pagination->create_links(); ?>

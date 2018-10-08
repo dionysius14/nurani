@@ -91,5 +91,10 @@ class Ourproduct extends CI_Controller {
         // echo $keyword;
         redirect('searchproduct');
     }
+    public function clearsearch(){
+		$this->session->unset_userdata('keyword');
+        // echo $keyword;
+        redirect('ourproduct');
+    }
 
 }
