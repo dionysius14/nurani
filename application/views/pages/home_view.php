@@ -71,10 +71,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="active">
 				<?php foreach($latest as $dtl){?>
 					<div class="gkImage">
-						<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" alt="">
-						<h4>
-							<?php echo $dtl->nama; ?>
-						</h4>
+						<div class="image">
+							<a href="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>">
+								<img src="<?php echo base_url(); ?>assets/uploads/banner/<?php echo $dtl->banner; ?>" alt="">
+							</a>
+						</div>
+						<div class="text">
+							<span>
+								<?php echo $dtl->nama; ?>
+							</span>
+						</div>
 					</div>
 				<?php } ?>
 			</div>
@@ -88,3 +94,40 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+        var selector = jQuery('.gkImage span');
+        var heights = [];
+        var selector2 = jQuery('.gkImage .image img');
+        var imagesHeight = [];
+
+        // Save the heights of every element into an array
+        selector.each(function(){
+            var height = $(this).outerHeight(true);
+            heights.push(height);
+        });
+
+        selector2.each(function(){
+            var imageHeight = $(this).outerHeight();
+            imagesHeight.push(imageHeight);
+        });
+
+        // Get the biggest height
+        var maxHeight = Math.max.apply(null, heights);
+        var maxImageHeight = Math.max.apply(null, imagesHeight);
+        // Show in the console to verify
+        console.log(heights,maxHeight);
+        console.log(imagesHeight,maxImageHeight);
+
+        // Set the maxHeight to every selected element
+        selector.each(function(){
+            $(this).parent().height(maxHeight);
+        }); 
+        selector2.each(function(){
+            $(this).parent().parent().height(maxImageHeight);
+        }); 
+	});
+
+
+</script>

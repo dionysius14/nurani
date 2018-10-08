@@ -409,21 +409,39 @@ li .fa-backward:before{
     overflow: hidden;
     padding: 20px 0px;
 }
+.homepage .homepage-container .ourproducts .active .gkImage .image{
+    position: relative;
+}
+.homepage .homepage-container .ourproducts .active .gkImage .image a{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);  
+    width: 100%;
+}
 .homepage .homepage-container .ourproducts .active .gkImage{
     float: left;
     width: 31.8%;
     margin: 0.75%;
     padding: 15px;
-    background: white;
+    background: white;  
 }
 .homepage .homepage-container .ourproducts .active .gkImage:nth-child(3n+1){
     clear: left;
 }
-.homepage .homepage-container .ourproducts .active .gkImage h4{
-    text-align: center;
+.homepage .homepage-container .ourproducts .active .gkImage .text{
+    position: relative;
 }
-.homepage .homepage-container .ourproducts .active .gkImage h4 a{
-    color: #282c2f;
+.homepage .homepage-container .ourproducts .active .gkImage span{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);    
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
 }
 .homepage .homepage-container .ourproducts .active .gkImage img{
     width: 100%;
@@ -504,8 +522,10 @@ li .fa-backward:before{
 }
 .ourproduct .ourproduct-container .container > div > h3{
     padding: 19px;
+    padding-top: 0px;
     padding-left: 0px;
     border-bottom: 1px solid #eee;
+    margin-top: 10px;
 }
 .ourproduct .ourproduct-container .container .sidebar-category h3{
     margin-right: 15px;
@@ -544,14 +564,30 @@ li .fa-backward:before{
     text-align: center;
     list-style: none;
 }
-.ourproduct .ourproduct-container .container .main > ul.items .item h4{
+.ourproduct .ourproduct-container .container .main > ul.items .item .image{
+    position: relative;
+}
+.ourproduct .ourproduct-container .container .main > ul.items .item a{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 100%;
+}
+.ourproduct .ourproduct-container .container .main > ul.items .item .text{
+    position: relative;
+}
+.ourproduct .ourproduct-container .container .main > ul.items .item .text span{
     color: black;  
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none;
+    font-size: 18px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 100%;
+    text-align: center;
 }
 .ourproduct .ourproduct-container .container .main > ul.items .item:nth-child(5n+1){
     clear: left;
@@ -559,9 +595,6 @@ li .fa-backward:before{
 .ourproduct .ourproduct-container .container .main > ul.items .item img{
     width: 100%;
 }
-
-
-
 
 
 
@@ -1400,6 +1433,12 @@ li .fa-backward:before{
     .slider .bx-wrapper{
         margin-bottom: 0px;
     }
+    .homepage .homepage-container .ourproducts .active .gkImage{
+        width: 100%;
+    }
+    .homepage .homepage-container .ourproducts .active .gkImage:nth-child(3n+1){
+        clear: none;
+    }
     .homepage .homepage-container .establish .side,
     .homepage .homepage-container .establish .side:first-child{
         width: 100%;
@@ -1487,7 +1526,8 @@ li .fa-backward:before{
     .ourproduct .ourproduct-container .container .main > ul.items .item{
         width: 50%;
         margin: 0 auto;
-        float: left;
+        float: left;    
+        margin-bottom: 20px;
     }
     .ourproduct .ourproduct-container .container .main > ul.items .item:nth-child(5n+1){
         clear: none;
