@@ -53,32 +53,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</nav>
 </div>
 <script type="text/javascript">
-	jQuery(document).ready(function(){
-
-		var selector = jQuery('.item span');
-        var heights = [];
-        var selector2 = jQuery('.item .image img');
-        var imagesHeight = [];
-
-        $('.container .main .items').each(function(){
-	        var imageHeight = 0;
-	        var imageText = 0;
-	        $(this).find('.item .image img').each(function(){
-	            var w = $(this).height();
-	            if (w > imageHeight) { 
-	              imageHeight = w;
-	            }
-	        });
-	        $(this).find('.item .text span').each(function(){
-	            var y = $(this).height();
-	            if (y > imageText) { 
-	              imageText = y;
-	            }
-	        });
-	        if (imageHeight) {
-	          $(this).find('.image').css({height:imageHeight});
-	          $(this).find('.text').css({height:imageText});
-	        }
-	    });     
+	$(window).on("load", function() {
+		var imageHeight = 0;
+		var imageText = 0;
+		$('.item .image img').each(function(){
+			var w = $(this).height();
+			if (w > imageHeight) { 
+				imageHeight = w;
+			}
+		});
+		$('.item .text span').each(function(){
+			var y = $(this).height();
+			if (y > imageText) { 
+				imageText = y;
+			}
+		});
+		$('.item .image').css({height:imageHeight});
+		$('.item .text').css({height:imageText});
 	});
 </script>

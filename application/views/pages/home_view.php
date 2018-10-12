@@ -96,26 +96,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 
 <script type="text/javascript">
-	jQuery(document).ready(function(){
-        $('.ourproducts .active').each(function(){
-	        var imageHeight = 0;
-	        var imageText = 0;
-	        $(this).find('.gkImage .image img').each(function(){
-	            var w = $(this).height();
-	            if (w > imageHeight) { 
-	              imageHeight = w;
-	            }
-	        });
-	        $(this).find('.gkImage .text span').each(function(){
-	            var y = $(this).height();
-	            if (y > imageText) { 
-	              imageText = y;
-	            }
-	        });
-	        if (imageHeight) {
-	          $(this).find('.image').css({height:imageHeight});
-	          $(this).find('.text').css({height:imageText});
+  $(window).on("load", function() {
+	    var imageHeight = 0;
+	    var imageText = 0;
+	    $('.gkImage .image img').each(function(){
+	        var w = $(this).height();
+	        if (w > imageHeight) { 
+	          imageHeight = w;
 	        }
-	    });   
+	    });
+	    $('.gkImage .text span').each(function(){
+	        var y = $(this).height();
+	        if (y > imageText) { 
+	          imageText = y;
+	        }
+	    });
+	  $('.gkImage .image').css({height:imageHeight});
+	  $('.gkImage .text').css({height:imageText});
 	});
 </script>
