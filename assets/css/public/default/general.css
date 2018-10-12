@@ -411,6 +411,8 @@ li .fa-backward:before{
 }
 .homepage .homepage-container .ourproducts .active .gkImage .image{
     position: relative;
+    overflow: hidden;
+    min-height: 200px;
 }
 .homepage .homepage-container .ourproducts .active .gkImage .image a{
     display: block;
@@ -563,6 +565,7 @@ li .fa-backward:before{
     padding: 0px 10px;
     text-align: center;
     list-style: none;
+    margin-bottom: 10px;
 }
 .ourproduct .ourproduct-container .container .main > ul.items .item .image{
     position: relative;
